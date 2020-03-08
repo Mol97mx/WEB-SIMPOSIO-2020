@@ -1,0 +1,43 @@
+{%extends 'core/base.html'%}
+{%block title%}Acerca de{%endblock%}
+{%block background%}{%load static%}{% static 'core/img/home-bg.jpg'%}{%endblock%}
+{%block headers%}
+    <h1>XVI Simposio Nacional y VII Internacional de Valuación Rural</h1>
+{%endblock%}
+{%block content%}
+<div class="row">   
+    <div class="col-lg-8 col-md-10 mx-auto">  
+        <p>La Universidad Michoacana de San NIcolas de Hidalgo</p>
+        <p>El Instituto en investigaciones en ciencias de la Tierra</p>
+        <p>La Facultad de Agrobiología "Presidente Juárez"</p>
+        <p>La Facultad de Economía "Vasco de Quiroga"</p>
+        <p>El Instituto Nacional de Valuación Agropecuaria y Forestal de Michoacán, A. C.</p>
+        <p>Convocan al</p>
+        <p><b>XVI Simposio Nacional y VII Internacional de Valuación Rural</b></p>
+        <p><b>Tema central: </b>El valor del suelo ante cambios de uso</p>
+        <p><b>Talleres: </b></p>
+        <!-- Proyecto -->
+	      <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/valuacion.jpg'%}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">Valuación de bienes distintos a la tierra</h2>   
+	          <p>Mtro. Gabriel Palacios Arroyo</p>
+	          <p><a href="http://google.com">Más información</a></p>
+	      	</div>
+	      </div>
+	      <!-- Proyecto -->
+	      <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/rustico.jpg'%}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      	    <h2 class="section-heading title">Valuación de inmuebles rústicos con presión urbana, influencia de infraestructura, riesgos y desastres naturales</h2>   
+	            <p>Ing. César Cantú Martínez</p>
+                <p>Dr. Víctor Manuel Hernández Madrigal</p>
+	            <p><a href="http://google.com">Más información</a></p>
+	      	</div>
+    </div>
+</div>
+{%endblock%}

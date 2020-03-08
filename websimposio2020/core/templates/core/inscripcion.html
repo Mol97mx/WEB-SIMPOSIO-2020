@@ -1,0 +1,21 @@
+{%extends 'core/base.html'%}
+{%block title%}Inscripción{%endblock%}
+{%block background%}{%load static%}{% static 'core/img/home-bg.jpg'%}{%endblock%}
+{%block headers%}
+    <h1>XVI Simposio Nacional y VII Internacional de Valuación Rural</h1>
+{%endblock%}
+{%block content%}
+<div class="row">   
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <form action="#" method="post">
+        <label for="fname">Nombre:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Apellidos:</label>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="factura">Requiere factura</label>
+        <input type="radio" id="factura" name="factura" value="factura"><br>
+        <input type="submit" value="registrarse"> 
+        </form>
+    </div>
+</div>
+{%endblock%}
