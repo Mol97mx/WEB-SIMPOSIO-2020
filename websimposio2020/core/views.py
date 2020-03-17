@@ -13,3 +13,6 @@ def informacion(request):
 
 def inscripcion(request):
     return render (request,"core/inscripcion.html")
+    
+def resumenes(request):
+    return render (request,"core/resumenes.html")

@@ -1,8 +1,103 @@
 {%extends 'core/base.html'%}
 {%block title%}Portada{%endblock%}
-{%block background%}{%load static%}{% static 'core/img/home-bg.jpg'%}{%endblock%}
+{%block background%}{%load static%}{% static 'core/img/bg1.jpg'%}{%endblock%}
 {%block headers%}
-    <h1>XVI Simposio Nacional y VII Internacional de Valuación Rural</h1>
+    <h2>XVI Simposio Nacional y VIII Internacional de Valuación Rural</h2>
+    <em>“Valor del suelo ante cambios de uso, por derecho de vía o desastres”</em>
 {%endblock%}
 {%block content%}
+<h2>Convocatoria</h2>
+<br>
+<div class="row" id="About">
+   <div class="col-lg-8 col-md-10 mx-auto">
+    <p>INSTITUTO NACIONAL DE VALUACIÓN AGROPECUARIA Y FORESTAL DE MICHOACAN, A. C.</p>
+    <p>INSTITUTO DE INVESTIGACIONES EN CIENCIAS DE LA TIERRA (INICIT) UMSNH</p>
+    <p>FACULTAD DE AGROBIOLOGIA “PDTE. JUAREZ” UMSNH</p>
+    <p>FACULTAD DE ECONOMÍA "VASCO DE QUIROGA" UMSNH</p>
+    <p>UNIVERSIDAD AUTONOMA DE ZACATECAS</p>
+    <p>EL COLEGIO DE MICHOACÁN, A. C.</p>
+    <p>UNVERSIDAD AUTONOMA DE BAJA CALIFORNIA</p>
+    <p>UNIVERSIDAD DEL VALLE DE ATEMAJAC</p>
+    <p>Convocan al</p>
+    <br>
+    <p><h2>XVI Simposio Nacional y VII Internacional de Valuación Rural</h2></p>
+    <p><h3>Valor del suelo ante cambios de uso, por derecho de vía o desastres</h3></p>
+    <br>
+    <p><b>Talleres: </b></p>
+    <br>
+        <!-- Proyecto -->
+	      <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/valuacion.jpg'%}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">Valuación de bienes distintos a la tierra</h2>   
+	          <p>Mtro. Gabriel Palacios Arroyo</p>
+	      	</div>
+	      </div>
+	      <!-- Proyecto -->
+	      <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/rustico.jpg'%}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      	    <h2 class="section-heading title">Valuación de inmuebles rústicos con presión urbana, influencia de infraestructura, riesgos y desastres naturales</h2>   
+	            <p>Ing. César Cantú Martínez (FECOVAL-MAI)</p>
+                <p>Dr. Víctor Manuel Hernández Madrigal (INICIT-UMSNH)</p>
+	      	</div>
+          </div>
+        <!-- Proyecto -->
+	      <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/valoracion.jpg'%}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">Valuación económica de impacto ambiental por el Método de Valoración Contingente. Aplicaciones en México y en el contexto global</h2>
+                <em>Estudio de caso: El derrame de petróleo en la plataforma Deepwater Horizon, BP en el Golfo de México en 2010.</em>
+	          <p>Dr. Oscar Pérez Veyna. (Universidad Autónoma de Zacatecas)</p>
+              <p>Mtro. Netzahualcoyotl Flores Lázaro. (INVAFMICH. A. C.)</p>
+	      	</div>
+	      </div>
+    </div>
+</div>
+<div class="row" id="Informacion"> 
+    <h2>Información</h2>
+    <br>
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <p><b>Lugar: </b>Centro Cultural Universitario UMSNH Morelia, Michoacán</p>
+        <br>
+        <p><b>Fecha: </b> 27, 28 y 29 de agosto de 2020</p>
+        <br>
+        <p>Conferencias magistrales</p>
+        <p>Ponencias</p>
+        <p>Panel de expertos</p>
+        <br>
+        <p><b>Costos: </b> Sólo Simposio: $ 2,750.00</p>
+        <p>Curso: $ 2,750.00</p>
+        <p>Simposio y curso $ 5,000.00</p>
+    </div>
+</div>
+<div class="row" id="Resumenes">
+    <h2>Resumenes</h2>
+    <br/>
+    <p>El resumen deberá enviarse a nombre del Comité Organizador al correo electrónico <em>simposiovalrural2020@gmail.com</em> antes del 30 de junio del 2015 mencionando su interés para que el trabajo sea evaluado para anexarlo en las memorias in extenso del simposio. La notificación de la aceptación de los trabajos y la modalidad de su presentación se hará llegar dentro de los primeros 15 días después del cierre de la convocatoria. La fecha límite para enviar los trabajos in extenso será el 15 de agosto.</p>
+    <p>
+        <a class="nav-link" href="{%url 'Resumenes'%}">Normas para presentacion</a>
+    </p>
+</div>
+<div class="row" id="Inscripcion">   
+    <h2>Inscripción</h2>
+    <br>
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <form action="#" method="post">
+        <label for="fname">Nombre:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Apellidos:</label>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="factura">Requiere factura</label>
+        <input type="radio" id="factura" name="factura" value="factura"><br>
+        <input type="submit" value="registrarse"> 
+        </form>
+    </div>
+</div>
 {%endblock%}
