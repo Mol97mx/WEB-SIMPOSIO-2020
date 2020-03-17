@@ -1,9 +1,28 @@
 {%extends 'core/base.html'%}
 {%block title%}Resumenes{%endblock%}
-{%block background%}{%load static%}{% static 'core/img/bg.jpg'%}{%endblock%}
+{%block background%}{%load static%}{% static 'core/img/bg1.jpg'%}{%endblock%}
+{%block menu%}
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="{%url 'Home'%}">INVAF Michoacán A.C.</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menú
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="navbar navbar-expand-sm fixed-top" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'Home'%}">Portada</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+{%endblock%}
 {%block headers%}
-    <h1>XVI Simposio Nacional y VIII Internacional de Valuación Rural</h1>
-    <h2>“Valor del suelo ante cambios de uso, por derecho de vía o desastres”</h2>
+    <h2>XVI Simposio Nacional y VIII Internacional de Valuación Rural</h2>
+    <em>“Valor del suelo ante cambios de uso, por derecho de vía o desastres”</em>
 {%endblock%}
 {%block content%}
     <h2>NORMAS PARA LA PRESENTACIÓN DE RESÚMENES</h2>
