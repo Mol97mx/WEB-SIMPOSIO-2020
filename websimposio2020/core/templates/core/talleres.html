@@ -1,0 +1,41 @@
+{%extends 'core/bases.html'%}
+{%block title%}Talleres{%endblock%}
+{%block content%}
+{%load static %}
+<br>
+<p><h4 align="center">Talleres: </h4></p>
+<br>
+<!-- Taller -->
+<div class="post">  	
+    <div class="thumb">
+        <img src="{% static 'core/img/valoracion.jpg'%}" width="150" height="100" alt="">
+    </div>
+    <div classclass="text">
+        <h2><a href="#">Valuación económica de impacto ambiental por el Método de Valoración Contingente. Aplicaciones en México y en el contexto global</a>
+        <em>Estudio de caso: El derrame de petróleo en la plataforma Deepwater Horizon, BP en el Golfo de México en 2010.</em></h2>
+        <p><a href="{%url 'SemblanzaOPV'%}">Dr. Oscar Pérez Veyna</a></p>
+        <p><a href="{%url 'SemblanzaNFL'%}">Mtro. Netzahualcoyotl Flores Lázaro</a></p>
+    </div>
+</div>
+<!-- taller -->
+<div class="post">  	
+    <div class="thumb">
+        <img src="{% static 'core/img/valuacion.jpg'%}" width="150" height="100" alt="">
+    </div>
+    <div class="text">
+        <h2><a href="#">Valuación de bienes distintos a la tierra</a></h2>   
+        <p><a href="{%url 'SemblanzaGPA'%}">Mtro. Gabriel Palacios Arroyo</a></p>
+    </div>
+</div>
+<!-- Taller -->
+<div class="post">  	
+    <div class="thumb">
+        <img src="{% static 'core/img/rustico.jpg'%}" width="150" height="100" alt="">
+    </div>
+    <div class="text">
+        <h2><a href="#">Valuación de inmuebles rústicos con presión urbana, influencia de infraestructura, riesgos y desastres naturales</a></h2>   
+        <p><a href="{%url 'SemblanzaCCM'%}">Ing. César Cantú Martínez</a></p>
+        <p><a href="{%url 'SemblanzaVMHM'%}">Dr. Víctor Manuel Hernández Madrigal</a></p>
+    </div>
+</div>
+{%endblock%}

@@ -23,6 +23,13 @@ urlpatterns = [
     path('informacion/',views.informacion,name="Informacion"),
     path('inscripcion/',views.inscripcion,name="Inscripcion"),
     path('resumenes/',views.resumenes,name="Resumenes"),
+    path('talleres/',views.talleres,name="Talleres"),
+    path('panel/',views.panel,name="Panel"),
+    path('semblanzaGPA/',views.semblanzaGPA,name="SemblanzaGPA"),
+    path('semblanzaCCM/',views.semblanzaCCM,name="SemblanzaCCM"),
+    path('semblanzaVMHM/',views.semblanzaVMHM,name="SemblanzaVMHM"),
+    path('semblanzaOPV/',views.semblanzaOPV,name="SemblanzaOPV"),
+    path('semblanzaNFL/',views.semblanzaNFL,name="SemblanzaNFL"),
     #url('^payments/', include('payments.urls')),
     path('admin/', admin.site.urls),
 ]

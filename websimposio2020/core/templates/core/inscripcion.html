@@ -1,21 +1,18 @@
-{%extends 'core/base.html'%}
+{%extends 'core/bases.html'%}
 {%block title%}Inscripción{%endblock%}
-{%block background%}{%load static%}{% static 'core/img/bg1.jpg'%}{%endblock%}
-{%block headers%}
-    <h2>XVI Simposio Nacional y VIII Internacional de Valuación Rural</h2>
-    <em>“Valor del suelo ante cambios de uso, por derecho de vía o desastres”</em>
-{%endblock%}
 {%block content%}
-<div class="row">   
-    <div class="col-lg-8 col-md-10 mx-auto">
-        <form action="#" method="post">
-        <label for="fname">Nombre:</label>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Apellidos:</label>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="factura">Requiere factura</label>
-        <input type="radio" id="factura" name="factura" value="factura"><br>
-        <input type="submit" value="registrarse"> 
+<div class="single post">   
+    <div id="comments">
+        <form action="#" method="post" id="registro">
+        <p><label for="fname">Nombre:</label>
+        <input type="text" id="fname" name="fname"></p>
+        <p><label for="lname">Apellidos:</label>
+        <input type="text" id="lname" name="lname"></p>
+        <p><label for="instituto">Instituto de procedencia:</label>
+        <input type="text" id="instituto" name="instituto" value="¿De qué universidad/instituto nos visitas?"></p>
+        <p><label for="localidad">Lugar de procedencia:</label>
+        <input type="text" id="localidad" name="localidad" value="¿De qué  lugar nos visitas?"></p>
+        <p><input type="submit" value="Pago con tarjeta"></p>
         </form>
     </div>
 </div>

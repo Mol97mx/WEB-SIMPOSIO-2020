@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title> {% block title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        {%load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css'%}"/>
+        <link href="{% static 'core/css/all.css'%}" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/bb45b96f88.js" crossorigin="anonymous"></script>
+        <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" href="ie.css" />
+        <style type="text/css">#content .latest .text { behavior: url(iepngfix.htc); }</style>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- BEGIN wrapper -->
+        <div id="wrapper">
+            <!-- BEGIN header -->
+            <div id="header">
+                <div class="logo">
+                    <h1><a href="{%url 'Home'%}">INVAF Michoacán A.C.</a></h1>
+                </div>
+                <div class="break"></div>
+                    <ul>
+                        <li><a href="{%url 'Home'%}">Portada</a></li>
+                        <li><a href="{%url 'Informacion'%}">Informes</a></li>
+                        <li><a href="{%url 'Inscripcion'%}">Inscripción</a></li>
+                        <li><a href="{%url 'Resumenes'%}">Resumenes</a></li>
+                    </ul>
+            </div>
+            <!-- END header -->
+            <!-- BEGIN body -->
+            <div id="body">
+                <!-- BEGIN content -->
+                <div id="content">
+                    {% block content %}{% endblock %}
+                </div>
+                <!-- END content -->
+                <!-- BEGIN sidebar -->
+                <div id="sidebar">
+                    <!-- begin featured video -->
+                    <h2>Video</h2>
+                    <div class="video"> 
+                        <img src="images/_video.jpg" alt="" /> 
+                    </div>
+                    <!-- end featured video -->
+                    <!-- begin actividades -->
+                    <h2>Actividades</h2>
+                    <ul>
+                        <li><a href="{%url 'Talleres'%}">Talleres</a></li>
+                        <li><a href="#">Conferencias magistrales</a></li>
+                        <li><a href="#">Ponencias</a></li>
+                        <li><a href="{%url 'Panel'%}">Panel Internacional de expertos</a></li>
+                    </ul>
+                    <!-- end actividades -->  
+                    <!-- begin calendario -->
+                    <h2>Calendario</h2>
+                    <div class="video"> 
+                        <img src="images/_video.jpg" alt="" /> 
+                    </div>
+                    <!-- end calendario -->
+                </div>
+                <!-- END sidebar -->
+                <div class="break"></div>
+                <!-- END body -->
+                {%if request.path != "/"%}<hr>{%endif%}
+                <!-- BEGIN footer -->
+                <div id="footer">
+                    <a href="#"><i class="fas fa-envelope fa-2x"></i></a>  
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>  
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>  
+                    <a href="#"><i class="fab fa-youtube fa-2x"></i></a> 
+                    Copyright &copy; 2020 CORDI
+                </div>
+                <!-- END footer -->
+            </div>
+        </div>
+        <!-- END wrapper -->
+    </body>
+</html>
