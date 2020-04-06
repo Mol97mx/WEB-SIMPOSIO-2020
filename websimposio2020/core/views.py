@@ -34,6 +34,3 @@ def semblanzaOPV(request):
 
 def semblanzaNFL(request):
     return render (request,"core/semblanzaNFL.html")
-
-def semblanzaNFL(request):
-    return render (request,"core/panel.html")
