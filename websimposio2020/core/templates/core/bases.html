@@ -11,6 +11,20 @@
         <link rel="stylesheet" type="text/css" href="ie.css" />
         <style type="text/css">#content .latest .text { behavior: url(iepngfix.htc); }</style>
         <![endif]-->
+        <style>
+            titulo
+            {
+                color:#9ACD32;
+                font-size:x-large;
+                font-weight: bold;
+            }
+            subtitulo
+            {
+                color:#000000;
+                font-size:large;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <!-- BEGIN wrapper -->
@@ -18,7 +32,41 @@
             <!-- BEGIN header -->
             <div id="header">
                 <div class="logo">
-                    <h1><a href="{%url 'Home'%}">INVAF Michoacán A.C.</a></h1>
+                   <table style="width: 100%" bgcolor= "#FFFFFF">
+                   <colgroup>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 8.5%"/>
+                        <col style="width: 23.5%"/>
+                    </colgroup>
+                    <tr>
+                        <td colspan="9" align="middle"><titulo>XVI Simposio Nacional y VII Internacional de Valuación Rural</titulo></td>
+                        <td rowspan="4"><a href="{%url 'Home'%}"><img src="{% static 'core/img/portada-bg.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" align="middle"><subtitulo>"Valor del suelo ante cambios de uso, por derecho de vía o desastres"</subtitulo></td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" align="middle">Morelia, Michoacán 27 al 29 de agosto del 2020</td>
+                    </tr>
+                    <tr>
+                        <td><img src="{% static 'core/img/logo_agrobiologia.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_invaf.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_umsnh.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_inicit.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_economia.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_zacatecas.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_bc.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_colegio.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                        <td><img src="{% static 'core/img/logo_univa.png'%}" alt="INVAF Michoacár A.C." style="width: 100%"></td>
+                    </tr>
+                   </table>
                 </div>
                 <div class="break"></div>
                     <ul>

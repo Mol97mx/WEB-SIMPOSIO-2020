@@ -30,6 +30,7 @@ urlpatterns = [
     path('semblanzaVMHM/',views.semblanzaVMHM,name="SemblanzaVMHM"),
     path('semblanzaOPV/',views.semblanzaOPV,name="SemblanzaOPV"),
     path('semblanzaNFL/',views.semblanzaNFL,name="SemblanzaNFL"),
-    #url('^payments/', include('payments.urls')),
+    path('charge/',views.charge,name="charge"),
+    path('success/<str:args>',views.success,name="success"),
     path('admin/', admin.site.urls),
 ]
