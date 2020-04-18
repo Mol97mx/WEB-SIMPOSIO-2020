@@ -222,6 +222,9 @@ img {
 	#sidebar .video {
 		padding: 10px 15px;
 		border-bottom: 1px solid #E7E6E6;
+		width:80%;
+		height:auto;
+		align-items: center;
 	}
 	#sidebar .tags {
 		padding: 10px 15px;
