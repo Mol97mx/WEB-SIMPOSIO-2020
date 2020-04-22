@@ -48,9 +48,6 @@ img {
 /** END wrapper **/
 
 /** BEGIN header **/
-#header {
-	
-}
 	#header ul {
 		list-style-type: none;
 		background-color: #283409;
@@ -83,9 +80,6 @@ img {
 		#header .logo p {
 			display: none;
 		}
-	#header {
-		
-	}
 /** END header **/
 
 /** BEGIN body **/
@@ -160,6 +154,23 @@ img {
 	#content .post {
 		margin: 10px 40px;
 		clear: both;
+	}
+	.tabla table{
+		width:100%;
+		font-size:65%;
+		font-weight: bold;
+		border-collapse:collapse; 
+		text-align: center; 
+		border-radius: 25px; 
+		}
+	.tabla table tr .uno{
+		background: #D6EAF8;
+	}
+	.tabla table tr .dos{
+		background: #D5F5E3;
+	}
+	.tabla table tr .tres{
+		background:#FAE5D3;
 	}
 		#content .thumb {
 			height: 100px;
@@ -378,9 +389,6 @@ h2.title {
 	}
 	#comments ol li .avatar {
 		float: right;
-	}
-	#comments ol li .comment-author {
-		
 	}
 		#comments ol li .comment-author .fn {
 			font-weight: bold;
