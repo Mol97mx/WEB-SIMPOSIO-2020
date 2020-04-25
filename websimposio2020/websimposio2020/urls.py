@@ -16,23 +16,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 #from django.conf.urls import include, url
-from core import views
+from core import views as core_views
+from Galeria import views as galeria_views
 from django.conf import settings
 
 urlpatterns = [
-    path('',views.home,name="Home"),
-    path('informacion/',views.informacion,name="Informacion"),
-    path('inscripcion/',views.inscripcion,name="Inscripcion"),
-    path('resumenes/',views.resumenes,name="Resumenes"),
-    path('talleres/',views.talleres,name="Talleres"),
-    path('panel/',views.panel,name="Panel"),
-    path('semblanzaGPA/',views.semblanzaGPA,name="SemblanzaGPA"),
-    path('semblanzaCCM/',views.semblanzaCCM,name="SemblanzaCCM"),
-    path('semblanzaVMHM/',views.semblanzaVMHM,name="SemblanzaVMHM"),
-    path('semblanzaOPV/',views.semblanzaOPV,name="SemblanzaOPV"),
-    path('semblanzaNFL/',views.semblanzaNFL,name="SemblanzaNFL"),
-    path('charge/',views.charge,name="charge"),
-    path('success/<str:args>',views.success,name="success"),
+    path('',core_views.home,name="Home"),
+    path('informacion/',core_views.informacion,name="Informacion"),
+    path('inscripcion/',core_views.inscripcion,name="Inscripcion"),
+    path('resumenes/',core_views.resumenes,name="Resumenes"),
+    path('talleres/',core_views.talleres,name="Talleres"),
+    path('panel/',core_views.panel,name="Panel"),
+    path('semblanzaGPA/',core_views.semblanzaGPA,name="SemblanzaGPA"),
+    path('semblanzaCCM/',core_views.semblanzaCCM,name="SemblanzaCCM"),
+    path('semblanzaVMHM/',core_views.semblanzaVMHM,name="SemblanzaVMHM"),
+    path('semblanzaOPV/',core_views.semblanzaOPV,name="SemblanzaOPV"),
+    path('semblanzaNFL/',core_views.semblanzaNFL,name="SemblanzaNFL"),
+    path('charge/',core_views.charge,name="charge"),
+    path('success/<str:args>',core_views.success,name="success"),
+    path('galeria/',galeria_views.galeria,name="Galeria"),
     path('admin/', admin.site.urls),
 ]
 
