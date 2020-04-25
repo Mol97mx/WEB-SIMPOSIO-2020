@@ -4,17 +4,18 @@
 {%load static %}
     <table style="width: 100%" bgcolor= "#FFFFFF">
     <colgroup>
-        <col style="width: 40%"/>
-        <col style="width: 30%"/>
-        <col style="width: 30%"/>
+        <col style="width: 55%"/>
+        <col style="width: 45%"/>
     </colgroup>
     {%for imagen in Galeria%}
         <tr>
+            <td colspan="2" align="center">
+                <b>{{imagen.titulo}}</b>
+            </td>
+        </tr>
+        <tr>
             <td>
                 <img src="{{imagen.imagen.url}}" alt="{{imagen.titulo}}" style="width:350px;">
-            </td>
-            <td align="center">
-                {{imagen.titulo}}
             </td>
             <td align="center">
                 {{imagen.descripcion}}
