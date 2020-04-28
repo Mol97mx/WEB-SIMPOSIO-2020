@@ -2,7 +2,7 @@
 {%block title%}Galeria de imagenes{%endblock%}
 {%block content%}
 {%load static %}
-    <table style="width: 100%" bgcolor= "#FFFFFF">
+    <table style="width: 100%; bgcolor:#FFFFFF;border-bottom:1pt solid black;">
     <colgroup>
         <col style="width: 55%"/>
         <col style="width: 45%"/>
@@ -10,7 +10,7 @@
     {%for imagen in Galeria%}
         <tr>
             <td colspan="2" align="center">
-                <b>{{imagen.titulo}}</b>
+                <titulo>{{imagen.titulo}}</titulo>
             </td>
         </tr>
         <tr>
