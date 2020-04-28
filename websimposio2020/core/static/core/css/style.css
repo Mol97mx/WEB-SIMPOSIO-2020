@@ -160,8 +160,7 @@ img {
 		font-size:65%;
 		font-weight: bold;
 		border-collapse:collapse; 
-		text-align: center; 
-		border-radius: 25px; 
+		text-align: center;  
 		}
 	.tabla table tr .uno{
 		background: #D6EAF8;
@@ -171,6 +170,20 @@ img {
 	}
 	.tabla table tr .tres{
 		background:#FAE5D3;
+	}
+	.calendario table{
+		width:100%;
+		font-weight: bold;
+		border-collapse:collapse; 
+		text-align: center;  
+		border:1px solid black;
+	}
+	.calendario table td{
+		border-collapse:collapse;
+		border:1px solid black;
+	}
+	.calendario table tr .titulo{
+		background: #9ACD32;
 	}
 		#content .thumb {
 			height: 100px;

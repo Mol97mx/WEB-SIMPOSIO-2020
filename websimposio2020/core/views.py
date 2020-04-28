@@ -23,6 +23,9 @@ def talleres(request):
 def panel(request):
     return render (request,"core/panel.html")
 
+def calendario(request):
+    return render (request,"core/calendario.html")
+
 def semblanzaGPA(request):
     return render (request,"core/semblanzaGPA.html")
 

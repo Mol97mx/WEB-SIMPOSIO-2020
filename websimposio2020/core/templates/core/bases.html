@@ -117,9 +117,8 @@
                     </ul>
                     <!-- end actividades -->  
                     <!-- begin calendario -->
-                    <h2>Calendario</h2>
                     <div> 
-                        <img src="images/_video.jpg" alt="" /> 
+                        <a href="{%url 'calendario'%}"><h2>Calendario de actividades</h2></a>
                     </div>
                     <!-- end calendario -->
                 </div>
@@ -151,7 +150,7 @@
             myIndex++;
             if (myIndex > x.length) {myIndex = 1}    
             x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 3000); // Change image every 2 seconds
+            setTimeout(carousel, 3000); // Change image every 3 seconds
         }
         </script>
     </body>
