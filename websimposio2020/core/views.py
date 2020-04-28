@@ -41,21 +41,71 @@ def semblanzaNFL(request):
 def charge(request):
     if request.method=='POST':
         print('Data:', request.POST)
-        amount=int(request.POST['amount'])
-        cliente=stripe.Customer.create(
-            email=request.POST['email'],
-            name=request.POST['name'],
-            description=request.POST['instituto'],
-            source=request.POST['stripeToken']
-        )
-        cargo=stripe.Charge.create(
-            customer=cliente,
-            amount=amount*100,
-            currency="mxn",
-            description="Pago por sólo asistencia"
-        )
-    return redirect(reverse ('success', args=[amount]))
+        if request.POST['amount']=='evento':
+            amount=int(2750)
+            desc="Inscripción al evento (Sólo asistencia)"
+        elif request.POST['amount']=='curso':
+            amount=int(2750)
+            desc="Inscripción a curso"
+        else:
+            amount=int(5000)
+            desc="Inscripción a cursos y taller"
+        try:
+        # Use Stripe's library to make requests...
+            cliente=stripe.Customer.create(
+                email=request.POST['email'],
+                name=request.POST['name'],
+                description=request.POST['instituto'],
+                source=request.POST['stripeToken']
+            )
+            cargo=stripe.Charge.create(
+                customer=cliente,
+                amount=amount*100,
+                currency="mxn",
+                description=desc,
+            )
+            return redirect(reverse ('success', args=[amount]))
+            pass
+        except stripe.error.CardError as e:
+            # Since it's a decline, stripe.error.CardError will be caught
+            #print('Status is: %s' % e.http_status)
+            #print('Type is: %s' % e.error.type)
+            #print('Code is: %s' % e.error.code)
+            # param is '' in this case
+            #print('Param is: %s' % e.error.param)
+            #print('Message is: %s' % e.error.message)
+            return redirect(reverse ('failure', args=[e.error.message]))
+        except stripe.error.RateLimitError as e:
+            # Too many requests made to the API too quickly
+            return redirect(reverse ('failure', args=[e.error.message]))
+            pass
+        except stripe.error.InvalidRequestError as e:
+            # Invalid parameters were supplied to Stripe's API
+            return redirect(reverse ('failure', args=[e.error.message]))
+            pass
+        except stripe.error.AuthenticationError as e:
+            # Authentication with Stripe's API failed
+            # (maybe you changed API keys recently)
+            return redirect(reverse ('failure', args=[e.error.message]))
+            pass
+        except stripe.error.APIConnectionError as e:
+            # Network communication with Stripe failed
+            return redirect(reverse ('failure', args=[e.error.message]))
+            pass
+        except stripe.error.StripeError as e:
+            # Display a very generic error to the user, and maybe send
+            # yourself an email
+            return redirect(reverse ('failure', args=[e.error.message]))
+            pass
+        except Exception as e:
+            # Something else happened, completely unrelated to Stripe
+            return redirect(reverse ('failure', args=[e.error.message]))
+            pass
 
 def success(request, args):
     amount=args
     return render(request,"core/success.html",{'amount':amount})
+
+def failure(request, args):
+    mensaje=args
+    return render(request,"core/failure.html",{'mensaje':mensaje})

@@ -34,6 +34,7 @@ urlpatterns = [
     path('semblanzaNFL/',core_views.semblanzaNFL,name="SemblanzaNFL"),
     path('charge/',core_views.charge,name="charge"),
     path('success/<str:args>',core_views.success,name="success"),
+    path('failure/<str:args>',core_views.failure,name="failure"),
     path('galeria/',galeria_views.galeria,name="Galeria"),
     path('admin/', admin.site.urls),
 ]
