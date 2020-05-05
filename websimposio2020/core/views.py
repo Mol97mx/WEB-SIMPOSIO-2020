@@ -20,8 +20,8 @@ def resumenes(request):
 def talleres(request):
     return render (request,"core/talleres.html")
 
-def panel(request):
-    return render (request,"core/panel.html")
+def ponentes(request):
+    return render (request,"core/ponentes.html")
 
 def calendario(request):
     return render (request,"core/calendario.html")
@@ -40,6 +40,24 @@ def semblanzaOPV(request):
 
 def semblanzaNFL(request):
     return render (request,"core/semblanzaNFL.html")
+
+def faq(request):
+    return render (request,"core/faq.html")
+
+def patrocinadores(request):
+    return render (request,"core/patrocinadores.html")
+
+def contacto(request):
+    return render (request,"core/contacto.html")
+
+def acerca(request):
+    return render (request,"core/acerca.html")
+
+def quienes(request):
+    return render (request,"core/quienes.html")
+
+def precios(request):
+    return render (request,"core/precios.html")
 
 def charge(request):
     if request.method=='POST':

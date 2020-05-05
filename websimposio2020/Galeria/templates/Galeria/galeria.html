@@ -1,26 +1,56 @@
-{%extends 'core/bases.html'%}
+{%extends 'core/base.html'%}
 {%block title%}Galeria de imagenes{%endblock%}
 {%block content%}
 {%load static %}
-    <table style="width: 100%; bgcolor:#FFFFFF;">
-    <colgroup>
-        <col style="width: 60%"/>
-        <col style="width: 40%"/>
-    </colgroup>
-    {%for imagen in Galeria%}
-        <tr>
-            <td colspan="2" align="center">
-                <titulo>{{imagen.titulo}}</titulo>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="{{imagen.imagen.url}}" alt="{{imagen.titulo}}" style="width:350px;">
-            </td>
-            <td align="center">
-                {{imagen.descripcion}}
-            </td>
-        </tr>
-    {%endfor%}
-    </table>
+<!--================================
+=            Page Title            =
+=================================-->
+
+<section class="page-title bg-title overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="title">
+					<h3>Our Gallery</h3>
+				</div>
+				<ol class="breadcrumb p-0 m-0">
+				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Porata</a></li>
+				  <li class="breadcrumb-item active">Nuestra galeria</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Page Title  ====-->
+
+
+<!--=============================
+=            Gallery            =
+==============================-->
+
+<section class="section gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+		        <div class="gallery-wrapper">
+                    {%for imagen in Galeria%}
+                        <div class="gallery-item mix meeting">
+                            <div class="image-block">
+                                <div class="image">
+                                    <img src="{{imagen.imagen.url}}" alt="{{imagen.titulo}}" class="img-fluid">
+                                    <div class="primary-overlay">
+                                        <a class="image-popup" data-effect="mfp-with-zoom" href="{{imagen.titulo}}"><i class="fa fa-picture-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {%endfor%}
+		        </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Gallery  ====-->
 {%endblock%}

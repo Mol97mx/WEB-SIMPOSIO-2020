@@ -1,116 +1,189 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> {% block title %}{% endblock %}</title>
-    <!-- Estilos y fuentes del template  -->
     {%load static %}
-    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
-    <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="{% static 'core/css/clean-blog.min.css'%}" rel="stylesheet">
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XVI Simposio Nacional y VII Internacional de Valuación Rural</title>
+    
+    <!-- PLUGINS CSS STYLE -->
+    <!-- Bootstrap -->
+    <link href="{% static 'core/plugins/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+    <!-- Themefisher Font -->  
+    <link href="{% static 'core/plugins/themefisher-font/style.css'%}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'core/plugins/font-awsome/css/font-awesome.min.css'%}" rel="stylesheet">
+    <!-- Magnific Popup -->
+    <link href="{% static 'core/plugins/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+    <!-- Slick Carousel -->
+    <link href="{% static 'core/plugins/slick/slick.css'%}" rel="stylesheet">
+    <link href="{% static 'core/plugins/slick/slick-theme.css'%}" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link href="{% static 'core/css/style.css'%}" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link href="{% static 'core/images/favicon.png'%}" rel="shortcut icon">
+
   </head>
-  <body>
-  {%block menu%}
-    <!-- Navegación -->
-    <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="{%url 'Home'%}">INVAF Michoacán A.C.</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menú
-          <i class="fa fa-bars"></i>
+
+  <body class="body-wrapper">
+
+
+  <!--========================================
+  =            Navigation Section            =
+  =========================================-->
+
+  <nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+    <div class="container-fluid p-0">
+        <!-- logo -->
+        <a class="navbar-brand" href="{%url 'Home'%}">
+          <img src="{% static 'core/images/logo_invaf.png'%}" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span>
         </button>
-        <div class="navbar navbar-expand-sm fixed-top" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'Home'%}">Portada</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'Informacion'%}">Informes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'Inscripcion'%}">Inscripción</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'Resumenes'%}">Resumenes</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-{%endblock%}
-    <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{%block background%}{%endblock%}')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-            {%block headers%}{%endblock%}
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown active dropdown-slide">
+            <a class="nav-link" href="{%url 'Home'%}"  data-toggle="dropdown">Home
+              <span>/</span>
+            </a>
+            <!-- Dropdown list -->
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{%url 'Home'%}">Portada</a>
             </div>
-          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'Ponentes'%}">Ponentes
+              <span>/</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-slide">
+            <a class="nav-link" href="#" data-toggle="dropdown">Paginas<span>/</span></a>
+              <!-- Dropdown list -->
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{%url 'Quienes'%}">Quienes somos</a>
+                <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
+                <a class="dropdown-item" href="{%url 'Precios'%}">Precios</a>
+                <a class="dropdown-item" href="{%url 'FAQ'%}">FAQ</a>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'Calendario'%}">Programa<span>/</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'Patrocinadores'%}">Patrocinadores<span>/</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'Contacto'%}">Contacto</a>
+          </li>
+        </ul>
+        <a href="{%url 'Inscripcion'%}" class="ticket">
+          <img src="{% static 'core/images/icon/ticket.png'%}" alt="ticket">
+          <span>Inscripción</span>
+        </a>
         </div>
-      </div>
-    </header>
-    <!-- Contenido-->
-    <div class="container">  
-        {% block content %}{% endblock %}
     </div>
+  </nav>
 
-    {%if request.path != "/"%}<hr>{%endif%}
-    <!-- Pié de página -->
-    <footer>
+  <!--====  End of Navigation Section  ====-->
+  {% block content %}{% endblock %}
+
+  <!--================================
+  =            Google Map            =
+  =================================-->
+
+  <section class="map">
+    <!-- Google Map -->
+    <div id="map"></div>
+    <div class="address-block">
+      <h4>Best Western Plus Gran Hotel Morelia</h4>
+      <ul class="address-list p-0 m-0">
+        <li><i class="fa fa-home"></i><span>Perif. Paseo de la República S/N, Félix Ireta, <br>Morelia, Mich.</span></li>
+        <li><i class="fa fa-phone"></i><span>443 690 3022</span></li>
+      </ul>
+      <a href="https://maps.google.com/maps?ll=19.683304,-101.183337&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&daddr=Best%20Western%20Plus%20Gran%20Hotel%20Morelia%20Perif.%20Paseo%20de%20la%20Rep%C3%BAblica%20S%2FN%20F%C3%A9lix%20Ireta%2058070%20Morelia%2C%20Mich.@19.6833038,-101.1833373" class="btn btn-white-md">Cómo llegar</a>
+    </div>
+  </section>
+
+  <!--====  End of Google Map  ====-->
+
+  <!--============================
+  =            Footer            =
+  =============================-->
+
+  <footer class="footer-main">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; 2020 CORDI </p>
+          <div class="col-md-12">
+            <div class="block text-center">
+              <div class="footer-logo">
+                <img src="{% static 'core/images/footer-logo_invaf.png'%}" alt="logo" class="img-fluid">
+              </div>
+              <ul class="social-links-footer list-inline">
+                <li class="list-inline-item">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#"><i class="fa fa-vimeo"></i></a>
+                </li>
+              </ul>
+            </div>
+            
           </div>
         </div>
       </div>
-    </footer>
+  </footer>
+  <!-- Subfooter -->
+  <footer class="subfooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <div class="copyright-text">
+            <p><a href="#">XVI Simposio Nacional y VII Internacional de Valuación Rural</a> &#169; 2020 Todos los derechos reservados</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Bootstrap y Javascripts -->
-    <script src="{% static 'core/vendor/jquery/jquery.min.js'%}"></script>
-    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
-    <script src="{% static 'core/js/clean-blog.min.js'%}"></script>
 
+
+    <!-- JAVASCRIPTS -->
+    <!-- jQuey -->
+    <script src="{% static 'core/plugins/jquery/jquery.js'%}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'core/plugins/popper/popper.min.js'%}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'core/plugins/bootstrap/js/bootstrap.min.js'%}"></script>
+    <!-- Smooth Scroll -->
+    <script src="{% static 'core/plugins/smoothscroll/SmoothScroll.min.js'%}"></script>  
+    <!-- Isotope -->
+    <script src="{% static 'core/plugins/isotope/mixitup.min.js'%}"></script>  
+    <!-- Magnific Popup -->
+    <script src="{% static 'core/plugins/magnific-popup/jquery.magnific-popup.min.js'%}"></script>
+    <!-- Slick Carousel -->
+    <script src="{% static 'core/plugins/slick/slick.min.js'%}"></script>  
+    <!-- SyoTimer -->
+    <script src="{% static 'core/plugins/syotimer/jquery.syotimer.min.js'%}"></script>
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="{% static 'core/plugins/google-map/gmap.js'%}"></script>
+    <!-- Custom Script -->
+    <script src="{% static 'core/js/custom.js'%}"></script>
   </body>
-
 </html>

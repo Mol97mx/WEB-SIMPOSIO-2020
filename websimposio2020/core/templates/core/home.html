@@ -1,72 +1,963 @@
-{%extends 'core/bases.html'%}
+{%extends 'core/base.html'%}
 {%block title%}Portada{%endblock%}
 {%block content%}
 {%load static %}
-  <div class="single post">
-    <p align="center">INSTITUTO NACIONAL DE VALUACIÓN AGROPECUARIA Y FORESTAL DE MICHOACAN A. C.</p>
-    <p align="center">INSTITUTO DE INVESTIGACIONES EN CIENCIAS DE LA TIERRA (INICIT) UMSNH</p>
-    <p align="center">FACULTAD DE AGROBIOLOGIA “PDTE. JUAREZ” UMSNH</p>
-    <p align="center">FACULTAD DE ECONOMÍA "VASCO DE QUIROGA" UMSNH</p>
-    <p align="center">UNIVERSIDAD AUTONOMA DE ZACATECAS</p>
-    <p align="center">EL COLEGIO DE MICHOACÁN, A. C.</p>
-    <p align="center">UNVERSIDAD AUTONOMA DE BAJA CALIFORNIA</p>
-    <p align="center">UNIVERSIDAD DEL VALLE DE ATEMAJAC</p>
-    <p><h1 align="center">Convocan al:</h1></p>
-    <br/>
-    <p align="center"><titulo2>XVI Simposio Nacional y VII Internacional de Valuación Rural</titulo2></p>
-    <br/>
-    <p><h2 align="center">"Valor del suelo ante cambios de uso, por derecho de vía o desastres"</h2></p>
-    <br/>
-    <p align="center">A celebrarse en la ciudad de Morelia, Michoacán del 27 al 29 de agosto del 2020</p>
-    <br/>
-    <p align="center"> Temáticas</p>
-    <div class="tabla">
-      <table>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td> 
-          <td class="uno">La evaluación y la planeación del desarrollo urbano, rural, local y regional</td>
-          <td></td>
-          <td class="uno">Valuación rural en áreas con presión de otros usos distintos al suelo rural</td>
-          <td></td>
-          <td class="uno">La reserva territorial, acceso al suelo urbano para las diversas tipologias sociales</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="dos">Métodos de evaluación aplicados en cultivos forestales</td>
-          <td></td>
-          <td class="dos">Valuación rural en áreas con presión de otros usos distintos al suelo rural</td>
-          <td></td>
-          <td class="dos">Valuación del suelo por derecho de via, riesgos o desastres</td>
-          <td></td>
-          <td class="dos">Valuación de infraestructura</td>
-          <td></td>
-          <td class="dos">Métodos de evaluación aplicados en cultivos de praderas y agostaderos</td>
-          <td></td>
-          <td class="dos">Metodologías para estimar el valor comercial de los bienes distintos a la tierra</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td class="tres">Métodos de evaluación aplicados en cultivos de praderas y agostaderos</td>
-          <td></td>
-          <td class="tres">Métodos de evaluación de activos ambientales</td>
-          <td></td>
-          <td class="tres">Métodos de evaluación aplicados en cultivos perennes</td>
-          <td></td>
-          <td class="tres">Valuación de daños en situaciones de desastre</td>
-          <td></td>
-          <td class="tres">Valuación de servicios ecosistemicos ante desastres naturales</td>
-          <td></td>
-        </tr>
-      </table>
-    </div>
-    <br/>
-    <p align="center"> Instituciones invitadas</p>
-    <br/>
-    <p><img class="alignleft" src="{% static 'core/img/invitados.png'%}" width="550" height="75" alt=""></p>
-    <br/>
-  </div>
+<!--============================
+=            Banner            =
+=============================-->
+
+<section class="banner bg-banner-one overlay">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- Content Block -->
+				<div class="block">
+					<!-- Coundown Timer -->
+					<div class="timer"></div>
+					<h1>XVI Simposio Nacional</h1>
+					<h2>VII Internacional de Valuación Rural</h2>
+					<h6>27-29 Agosto 2020 Morelia</h6>
+					<!-- Action Button -->
+					<a href="{%url 'Inscripcion'%}" class="btn btn-white-md">inscribete ahora</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	
+<!--====  End of Banner  ====-->
+
+<!--===========================
+=            About            =
+============================-->
+
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 align-self-center">
+				<div class="image-block bg-about">
+					<img class="img-fluid" src="{% static 'core/images/speakers/logo_invaf.png'%}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-6 align-self-center">
+				<div class="content-block">
+					<h2>Acerca del <span class="alternate">simposio</span></h2>
+					<div class="description-one">
+						<p>
+							En esta edición XVI del Simposio Nacional y VIII Internacional de Valuación Rural, estamos incursionando en una temática que no es ajena a nuestra actividad.
+						</p>
+					</div>
+					<div class="description-two">
+						<p>Es todo un reto, pero al mismo tiempo un área de oportunidad para el desarrollo profesional, académico y de investigación de los profesionales de la valuación económica, para que juntamente con los estudiosos del riesgos y peligros, construyamos herramientas que no sólo proporcionen probabilidades o susceptibilidad de daño, sino su cuantía para la toma de decisiones tempranas a su ocurrencia.</p>
+					</div>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<a href="{%url 'Inscripcion'%}" class="btn btn-main-md">inscribete</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="{%url 'Acerca'%}" class="btn btn-transparent-md">Mas...</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of About  ====-->
+
+<!--==============================
+=            Speakers            =
+===============================-->
+
+<section class="section speakers bg-speaker overlay-lighter">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Section Title -->
+				<div class="section-title white">
+					<h3>¿Quién <span class="alternate">Presentara?</span></h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 1 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/CCM.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaCCM'%}">Cesar Cantú Martínez</a></h5>
+						<p>Maestro en Reproducción Animal y Genética</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 2 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/GPA.png'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaGPA'%}">Gabriel Palacios Arroyo</a></h5>
+						<p>Maestro en valuación Inmobiliaria e Industrial</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 3 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/speaker-three.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaNFL'%}">Netzahualcoyotl Flores Lázaro</a></h5>
+						<p>Doctor en Geografía</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 4 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/speaker-four.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaOPV'%}">Oscar Pérez Veyna</a></h5>
+						<p>Doctor en Administración</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 5 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/VMHM.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaVMHM'%}">Víctor Manuel Hernández Madrigal</a></h5>
+						<p>Doctor en Geografía</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Speakers  ====-->
+
+<!--==============================
+=            Schedule            =
+===============================-->
+
+<section class="section schedule">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3><span class="alternate">Agenda del evento</span></h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="schedule-tab">
+					<ul class="nav nav-pills text-center">
+					  <li class="nav-item">
+					    <a class="nav-link active" href="#aug27" data-toggle="pill">
+					    	Dia-01
+					    	<span>27 Agosto 2020</span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#aug28" data-toggle="pill">
+							Dia-02
+					    	<span>28 Agosto 2020</span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#aug29" data-toggle="pill">
+							Dia-03
+					    	<span>29 Agosto 2020</span>
+					    </a>
+					  </li>
+					</ul>
+				</div>
+				<div class="schedule-contents bg-schedule">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active schedule-item" id="aug27">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings">
+					  			<div class="time">Hora</div>
+					  			<div class="speaker">Ponente</div>
+					  			<div class="subject">Tema</div>
+					  			<div class="venue">Lugar</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">9.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-one.jpg" alt="speaker-thumb-one">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">10.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-two.jpg" alt="speaker-thumb-two">
+										<span class="name">Zerad Pawel</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Principle of Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium B</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">12.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-three.jpg" alt="speaker-thumb-three">
+										<span class="name">Henry Mong</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Wp Requirements</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium C</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">2.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-four.jpg" alt="speaker-thumb-four">
+										<span class="name">Baily Leo</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium D</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-five.jpg" alt="speaker-thumb-five">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-six.jpg" alt="speaker-thumb-six">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="aug28">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings">
+					  			<div class="time">Hora</div>
+					  			<div class="speaker">Ponente</div>
+					  			<div class="subject">Tema</div>
+					  			<div class="venue">Lugar</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">9.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-one.jpg" alt="speaker-thumb-one">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">10.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-two.jpg" alt="speaker-thumb-two">
+										<span class="name">Zerad Pawel</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Principle of Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium B</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">12.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-three.jpg" alt="speaker-thumb-three">
+										<span class="name">Henry Mong</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Wp Requirements</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium C</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">2.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-four.jpg" alt="speaker-thumb-four">
+										<span class="name">Baily Leo</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium D</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-five.jpg" alt="speaker-thumb-five">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-six.jpg" alt="speaker-thumb-six">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="aug29">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings">
+					  			<div class="time">Hora</div>
+					  			<div class="speaker">Ponente</div>
+					  			<div class="subject">Tema</div>
+					  			<div class="venue">Lugar</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">9.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-one.jpg" alt="speaker-thumb-one">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">10.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-two.jpg" alt="speaker-thumb-two">
+										<span class="name">Zerad Pawel</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Principle of Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium B</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">12.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-three.jpg" alt="speaker-thumb-three">
+										<span class="name">Henry Mong</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Wp Requirements</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium C</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">2.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-four.jpg" alt="speaker-thumb-four">
+										<span class="name">Baily Leo</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium D</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-five.jpg" alt="speaker-thumb-five">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+							  			<img src="images/speakers/speaker-thumb-six.jpg" alt="speaker-thumb-six">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Schedule  ====-->
+
+<!--==================================
+=            Registration            =
+===================================-->
+
+<section class="registration">
+	<div class="container-fuild p-0">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 p-0">
+				<div class="service-block bg-service overlay-primary text-center">
+					<div class="row no-gutters">
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-microphone"></i>
+								<h5>5 Ponentes</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-flag"></i>
+								<h5>Más de 100 lugares</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-ticket"></i>
+								<h5>Lugares disponibles</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-calendar"></i>
+								<h5>3 dias de evento</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 p-0">
+				<div class="registration-block bg-registration overlay-dark">
+					<div class="block">
+						<div class="title text-left">
+							<h3>Inscribete al <span class="alternate">Simposio</span></h3>
+						</div>
+						<form action="#" class="row">
+							<div class="col-md-6">
+								<input type="text" class="form-control main" placeholder="Your Name">
+							</div>
+							<div class="col-md-6">
+								<input type="email" class="form-control main" placeholder="Email">
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control main" placeholder="Phone">
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<select class="form-control main" id="select-ticket">
+								      <option>Ticket Type</option>
+								      <option>1</option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+								    </select>
+								</div>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-white-md">Register Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Registration  ====-->
+
+
+<!--===================================
+=            Pricing Table            =
+====================================-->
+
+<section class="section pricing">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3><span class="alternate">Inscribete</span></h3>
+					<p>Aceptamos pago con tarjeta</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<!-- Pricing Item -->
+				<div class="pricing-item">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Pago por Inscripción al evento (Sólo asistencia)</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2><span>$</span>2750.00</h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>1 Comfortable Seats</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Free Lunch and Coffee</p></li>
+							<li><p><span class="fa fa-times-circle unavailable"></span>Certificate</p></li>
+							<li><p><span class="fa fa-times-circle unavailable"></span>Easy Access</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="{%url 'Inscripcion'%}" class="btn btn-transparent-md">Inscribete</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<!-- Pricing Item -->
+				<div class="pricing-item featured">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Inscripción a curso</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2><span>$</span>2750.00</h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>1 Comfortable Seats</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Free Lunch and Coffee</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Certificate</p></li>
+							<li><p><span class="fa fa-times-circle unavailable"></span>Easy Access</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="{%url 'Inscripcion'%}" class="btn btn-main-md">Inscribete</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 m-auto">
+				<!-- Pricing Item -->
+				<div class="pricing-item">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Inscripción a cursos y taller</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2><span>$</span>5000.00</h2>
+							<p>/Person</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>1 Comfortable Seats</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Free Lunch and Coffee</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Certificate</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Easy Access</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="{%url 'Inscripcion'%}" class="btn btn-transparent-md">Inscribete</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Pricing Table  ====-->
+
+
+<!--===========================================
+=            Call to Action Ticket            =
+============================================-->
+
+<section class="cta-ticket bg-ticket overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<!-- Get ticket info -->
+				<div class="content-block">
+					<h2>!Inscribete <span class="alternate">Ahora!</span></h2>
+					<p>Aceptamos pago con tarjeta</p>
+					<a href="{%url 'Inscripcion'%}" class="btn btn-main-md">Inscribete</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="image-block"><img src="{% static 'core/images/speakers/speaker-ticket.png'%}" alt="" class="img-fluid"></div>
+</section>
+
+<!--====  End of Call to Action Ticket  ====-->
+
+<!--==============================
+=            Sponsors            =
+===============================-->
+
+<section class="sponsors section bg-sponsors overlay-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3><span class="alternate">Instituciones</span> invitadas</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="block text-center">
+					<!-- Sponsors image list -->
+					<ul class="list-inline sponsors-list">
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/SMACCDT.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/PEMEX.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/INDAABIN.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/SEDATU.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/CFE.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Title -->
+				<div class="sponsor-title text-center">
+					<h5>Universidades invitadas</h5>
+				</div>
+				<div class="block text-center">
+					<!-- Sponsors image list -->
+					<ul class="list-inline sponsors-list">
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_invaf.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_umsnh.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_inicit.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_agrobiologia.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_economia.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_zacatecas.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_bc.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_colegio.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="{% static 'core/images/sponsors/logo_univa.png'%}" alt="" class="img-fluid">
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Sponsors  ====-->
 {%endblock%}

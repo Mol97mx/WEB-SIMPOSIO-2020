@@ -1,0 +1,149 @@
+{%extends 'core/base.html'%}
+{%block title%}Ponentes{%endblock%}
+{%block content%}
+{%load static %}
+<!--================================
+=            Page Title            =
+=================================-->
+
+<section class="page-title bg-title overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="title">
+					<h3>Nuestros ponentes</h3>
+				</div>
+				<ol class="breadcrumb p-0 m-0">
+				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Portada</a></li>
+				  <li class="breadcrumb-item active">Nuestros ponentes</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!--==============================
+=            Speakers            =
+===============================-->
+
+<section class="section speakers white">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Section Title -->
+				<div class="section-title">
+					<h3>¿Quienes <span class="alternate">Presentan?</span></h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 1 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/CCM.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaCCM'%}">Cesar Cantú Martínez</a></h5>
+						<p>Maestro en Reproducción Animal y Genética</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 2 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/GPA.png'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaGPA'%}">Gabriel Palacios Arroyo</a></h5>
+						<p>Maestro en valuación Inmobiliaria e Industrial</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 3 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/speaker-three.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaNFL'%}">Netzahualcoyotl Flores Lázaro</a></h5>
+						<p>Doctor en Geografía</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 4 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/speaker-four.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaOPV'%}">Oscar Pérez Veyna</a></h5>
+						<p>Doctor en Administración</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 5 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="{% static 'core/images/speakers/VMHM.jpg'%}" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="{%url 'SemblanzaVMHM'%}">Víctor Manuel Hernández Madrigal</a></h5>
+						<p>Doctor en Geografía</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Speakers  ====-->
+{%endblock%}
