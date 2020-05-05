@@ -2067,16 +2067,16 @@ select.form-control:not([size]):not([multiple]) {
   margin-bottom: 30px;
 }
 
-.map {
+.mapa {
   position: relative;
 }
 
-.map #map {
+.mapa #mapa {
   height: 480px;
   color: white;
 }
 
-.map .address-block {
+.mapa .address-block {
   position: absolute;
   padding: 45px 50px 50px 50px;
   top: 80px;
@@ -2085,51 +2085,51 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 @media (max-width: 480px) {
-  .map .address-block {
+  .mapa .address-block {
     left: 30px;
   }
 }
 
-.map .address-block h4, .map .address-block li {
+.mapa .address-block h4, .map .address-block li {
   color: #fff;
   margin-bottom: 20px;
 }
 
-.map .address-block h4 {
+.mapa .address-block h4 {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.map .address-block ul.address-list li {
+.mapa .address-block ul.address-list li {
   list-style: none;
   margin-bottom: 10px;
 }
 
-.map .address-block ul.address-list li i {
+.mapa .address-block ul.address-list li i {
   font-size: 1.125rem;
 }
 
-.map .address-block ul.address-list li span {
+.mapa .address-block ul.address-list li span {
   margin-left: 15px;
 }
 
-.map .address-block a {
+.mapa .address-block a {
   margin-top: 35px;
 }
 
-.map.new {
+.mapa.new {
   overflow: hidden;
 }
 
-.map.new #map {
+.mapa.new #map {
   height: 640px;
 }
 
-.map.new .address-block {
+.mapa.new .address-block {
   left: 60%;
 }
 
-.map.new .register {
+.mapa.new .register {
   width: 50%;
   position: absolute;
   top: 0;
@@ -2138,31 +2138,31 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 @media (max-width: 767px) {
-  .map.new .register {
+  .mapa.new .register {
     width: 100%;
     position: relative;
   }
 }
 
-.map.new .register .block {
+.mapa.new .register .block {
   padding: 130px 10%;
 }
 
-.map.new .register .block .title {
+.mapa.new .register .block .title {
   position: relative;
   margin-bottom: 65px;
 }
 
-.map.new .register .block .title h3 {
+.mapa.new .register .block .title h3 {
   color: #fff;
   font-weight: 400;
 }
 
-.map.new .register .block .title p {
+.mapa.new .register .block .title p {
   color: #fff;
 }
 
-.map.new .register .block .form-control, .map.new .register .block button {
+.mapa.new .register .block .form-control, .mapa.new .register .block button {
   margin-bottom: 40px;
 }
 
