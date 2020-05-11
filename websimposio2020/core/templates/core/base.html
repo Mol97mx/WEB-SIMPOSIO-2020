@@ -11,8 +11,6 @@
     <!-- PLUGINS CSS STYLE -->
     <!-- Bootstrap -->
     <link href="{% static 'core/plugins/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
-    <!-- Themefisher Font -->  
-    <link href="{% static 'core/plugins/themefisher-font/style.css'%}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{% static 'core/plugins/font-awsome/css/font-awesome.min.css'%}" rel="stylesheet">
     <!-- Magnific Popup -->
@@ -67,7 +65,6 @@
                 <a class="dropdown-item" href="{%url 'Quienes'%}">Quienes somos</a>
                 <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
                 <a class="dropdown-item" href="{%url 'Precios'%}">Precios</a>
-                <a class="dropdown-item" href="{%url 'FAQ'%}">FAQ</a>
               </div>
           </li>
           <li class="nav-item">
@@ -91,25 +88,6 @@
   <!--====  End of Navigation Section  ====-->
   {% block content %}{% endblock %}
 
-  <!--================================
-  =            Google Map            =
-  =================================-->
-
-  <section class="mapa">
-    <!-- Google Map -->
-    <div id="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.6904244740913!2d-101.1855293493022!3d19.683208586677406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a979d28ae3fda59!2sBest%20Western%20Plus%20Gran%20Hotel%20Morelia!5e0!3m2!1ses!2smx!4v1588703051934!5m2!1ses!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
-    <div class="address-block">
-      <h4>Best Western Plus Gran Hotel Morelia</h4>
-      <ul class="address-list p-0 m-0">
-        <li><i class="fa fa-home"></i><span>Perif. Paseo de la República S/N, Félix Ireta, <br>Morelia, Mich.</span></li>
-        <li><i class="fa fa-phone"></i><span>443 690 3022</span></li>
-      </ul>
-      <a href="https://maps.google.com/maps?ll=19.683304,-101.183337&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&daddr=Best%20Western%20Plus%20Gran%20Hotel%20Morelia%20Perif.%20Paseo%20de%20la%20Rep%C3%BAblica%20S%2FN%20F%C3%A9lix%20Ireta%2058070%20Morelia%2C%20Mich.@19.6833038,-101.1833373" class="btn btn-white-md">Cómo llegar</a>
-    </div>
-  </section>
-
-  <!--====  End of Google Map  ====-->
-
   <!--============================
   =            Footer            =
   =============================-->
@@ -131,12 +109,6 @@
                 </li>
                 <li class="list-inline-item">
                   <a href="#"><i class="fa fa-instagram"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#"><i class="fa fa-rss"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#"><i class="fa fa-vimeo"></i></a>
                 </li>
               </ul>
             </div>

@@ -54,34 +54,40 @@
 	</div>
 </section>
 
-<section class="section single-speaker">
+<section class="section contact-form">
 	<div class="container">
-        <div class="block">
-            <form action="{%url 'charge'%}" method="post" id="payment-form">
-                {% csrf_token %}
-                <p><label for="name">Nombre:</label>
-                <input required type="text" id="name" name="name" placeholder="Nombre completo..."></p>
-                <p><label for="email">Email:</label>
-                <input required type="text" id="email" name="email" placeholder="Email..."></p>
-                <p><label for="instituto">Instituto de procedencia:</label>
-                <input required type="text" id="instituto" name="instituto" placeholder="¿De qué universidad/instituto nos visitas?"></p>
-                <select required name="amount" id="amount">
-                    <option selected value="evento">Pago por Inscripción al evento (Sólo asistencia) $2750</option>
-                    <option value="curso">Pago por Inscripción a curso $2750</option>
-                    <option value="paquete">Pago por Inscripción a curso y taller $5000</option>
-                </select>
-                <div class="form-row">
-                    <p><label for="card-element">Tarjeta de crédito o débito</label></p>
-                    <div id="card-element">
-                        <!-- A Stripe Element will be inserted here. -->
-                    </div>
-                    <!-- Used to display form errors. -->
-                    <div id="card-errors" role="alert">
-                    </div>
+        <form action="{%url 'charge'%}" method="post" id="payment-form" class="row">
+            {% csrf_token %}
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="name" name="name" placeholder="Nombre completo...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="email" name="email" placeholder="Email...">
+            </div>
+            <div class="col-md-12">
+            <input required type="text" class="form-control main" id="instituto" name="instituto" placeholder="¿De qué universidad/instituto nos visitas?">
+            </div>
+            <div class="col-md-12">
+            <select required name="amount" id="amount" class="form-control main">
+                <option selected value="evento">Simposio $1375</option>
+                <option value="curso">Curso $1375</option>
+                <option value="paquete">Simposio y Curso $2500</option>
+            </select>
+            </div>
+            <div class="col-md-12">
+                <label for="card-element">Tarjeta de crédito o débito</label>
+                <br>
+                <div id="card-element">
+                    <!-- A Stripe Element will be inserted here. -->
                 </div>
-                <button>Pagar</button>
-            </form>
-        </div>
+                <!-- Used to display form errors. -->
+                <div id="card-errors" role="alert">
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-main-md">Pagar</button>
+            </div>
+        </form>
     </div>
 </section>
 

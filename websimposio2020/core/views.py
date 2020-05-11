@@ -17,9 +17,6 @@ def inscripcion(request):
 def resumenes(request):
     return render (request,"core/resumenes.html")
 
-def talleres(request):
-    return render (request,"core/talleres.html")
-
 def ponentes(request):
     return render (request,"core/ponentes.html")
 
@@ -41,9 +38,6 @@ def semblanzaOPV(request):
 def semblanzaNFL(request):
     return render (request,"core/semblanzaNFL.html")
 
-def faq(request):
-    return render (request,"core/faq.html")
-
 def patrocinadores(request):
     return render (request,"core/patrocinadores.html")
 
@@ -63,14 +57,14 @@ def charge(request):
     if request.method=='POST':
         print('Data:', request.POST)
         if request.POST['amount']=='evento':
-            amount=int(2750)
-            desc="Inscripción al evento (Sólo asistencia)"
+            amount=int(1375)
+            desc="Inscripción al simposio"
         elif request.POST['amount']=='curso':
-            amount=int(2750)
+            amount=int(1375)
             desc="Inscripción a curso"
         else:
-            amount=int(5000)
-            desc="Inscripción a cursos y taller"
+            amount=int(2500)
+            desc="Inscripción a cursos y simposio"
         try:
         # Use Stripe's library to make requests...
             cliente=stripe.Customer.create(

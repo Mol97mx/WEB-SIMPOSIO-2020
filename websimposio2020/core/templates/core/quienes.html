@@ -1,5 +1,5 @@
 {%extends 'core/base.html'%}
-{%block title%}Ponentes{%endblock%}
+{%block title%}Inscripción{%endblock%}
 {%block content%}
 {%load static %}
 <!--================================
@@ -11,27 +11,70 @@
 		<div class="row">
 			<div class="col-12 text-center">
 				<div class="title">
-					<h3>Nuestros ponentes</h3>
+					<h3>¿Quienes somos?</h3>
 				</div>
 				<ol class="breadcrumb p-0 m-0">
 				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Portada</a></li>
-				  <li class="breadcrumb-item active">Nuestros ponentes</li>
+				  <li class="breadcrumb-item active">¿Quienes somos?</li>
 				</ol>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!--====  End of Page Title  ====-->
+
+
+<!--===========================
+=            About            =
+============================-->
+
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 align-self-center">
+				<div class="image-block bg-about">
+					<img class="img-fluid" src="{% static 'core/images/speakers/logo_invaf.png'%}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-6 align-self-center">
+				<div class="content-block">
+					<h2>Acerca del <span class="alternate">simposio</span></h2>
+					<div class="description-one">
+						<p>
+							En esta edición XVI del Simposio Nacional y VIII Internacional de Valuación Rural, estamos incursionando en una temática que no es ajena a nuestra actividad.
+						</p>
+					</div>
+					<div class="description-two">
+						<p>Es todo un reto, pero al mismo tiempo un área de oportunidad para el desarrollo profesional, académico y de investigación de los profesionales de la valuación económica, para que juntamente con los estudiosos del riesgos y peligros, construyamos herramientas que no sólo proporcionen probabilidades o susceptibilidad de daño, sino su cuantía para la toma de decisiones tempranas a su ocurrencia.</p>
+					</div>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<a href="{%url 'Inscripcion'%}" class="btn btn-main-md">inscribete</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="{%url 'Acerca'%}" class="btn btn-transparent-md">Mas...</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of About  ====-->
+
 <!--==============================
 =            Speakers            =
 ===============================-->
 
-<section class="section speakers white">
+<section class="section speakers bg-speaker overlay-lighter">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<!-- Section Title -->
-				<div class="section-title">
-					<h3>¿Quienes <span class="alternate">Presentan?</span></h3>
+				<div class="section-title white">
+					<h3>¿Quién <span class="alternate">Presentara?</span></h3>
 				</div>
 			</div>
 		</div>
@@ -146,4 +189,81 @@
 </section>
 
 <!--====  End of Speakers  ====-->
+
+<!--=================================
+=            Testimonial            =
+==================================-->
+
+<section class="section testimonial">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3><span class="alternate">¿Quiénes somos?</span></h3>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-20">
+			<div class="col-lg-4 col-md-6">
+				<!-- Testimonial -->
+				<div class="testimonial-item">
+					<!-- Given Comment -->
+					<div class="comment">
+						<p>Ser el principal referente en materia de valuación del territorio rural, utilizando metodologías emergentes con un enfoque global, pero sin perder de vista las particularidades de lo local, ya que actualmente la sociedad demanda estudios técnica y científicamente demostrables.</p>
+					</div>
+					<div class="person">
+						<div class="media">
+							<div class="media-body">
+								<!-- Person Name -->
+								<div class="name"><p>Misión</p></div>
+								<!-- Profession -->
+								<div class="profession"><p>INVAF Michoacán</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<!-- Testimonial -->
+				<div class="testimonial-item">
+					<!-- Given Comment -->
+					<div class="comment">
+						<p>Ser una institución líder de estudios y servicios técnicos en materia de valuación rural con los más altos estándares de calidad, a la vanguardia tecnológica de competencia internacional para la gestión y desarrollo de valoración integral del territorio, construyendo y proponiendo modelos innovadores de valuación de bienes en beneficio de la sociedad.</p>
+					</div>
+					<div class="person">
+						<div class="media">
+							<div class="media-body">
+								<!-- Person Name -->
+								<div class="name"><p>Visión</p></div>
+								<!-- Profession -->
+								<div class="profession"><p>INVAF Michoacán</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mx-auto">
+				<!-- Testimonial -->
+				<div class="testimonial-item">
+					<!-- Given Comment -->
+					<div class="comment">
+						<p>Agrupar a personas físicas y morales relacionadas con el sector rural, con capacidad profesional, altos estándares de calidad, ética y honorabilidad que garanticen los juicios de valor en el medio rural. </p>
+					</div>
+					<div class="person">
+						<div class="media">
+							<div class="media-body">
+								<!-- Person Name -->
+								<div class="name"><p>Objetivo</p></div>
+								<!-- Profession -->
+								<div class="profession"><p>INVAF Michoacán</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Testimonial  ====-->
 {%endblock%}
