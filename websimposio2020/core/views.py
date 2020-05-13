@@ -17,8 +17,8 @@ def inscripcion(request):
 def resumenes(request):
     return render (request,"core/resumenes.html")
 
-def ponentes(request):
-    return render (request,"core/ponentes.html")
+def instructores(request):
+    return render (request,"core/instructores.html")
 
 def calendario(request):
     return render (request,"core/calendario.html")
@@ -52,6 +52,9 @@ def quienes(request):
 
 def precios(request):
     return render (request,"core/precios.html")
+
+def talleres(request):
+    return render (request,"core/talleres.html")
 
 def charge(request):
     if request.method=='POST':

@@ -53,10 +53,13 @@
               <a class="dropdown-item" href="{%url 'Home'%}">Portada</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{%url 'Ponentes'%}">Ponentes
-              <span>/</span>
-            </a>
+          <li class="nav-item dropdown dropdown-slide">
+            <a class="nav-link" href="#">Cursos Talleres<span>/</span></a>
+            <!-- Dropdown list -->
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{%url 'Instructores'%}">Instructores</a>
+                <a class="dropdown-item" href="{%url 'Talleres'%}">Cursos Talleres</a>
+              </div>
           </li>
           <li class="nav-item dropdown dropdown-slide">
             <a class="nav-link" href="#" data-toggle="dropdown">Paginas<span>/</span></a>
@@ -64,7 +67,7 @@
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="{%url 'Quienes'%}">Quienes somos</a>
                 <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
-                <a class="dropdown-item" href="{%url 'Precios'%}">Precios</a>
+                <a class="dropdown-item" href="{%url 'Precios'%}">Costos</a>
               </div>
           </li>
           <li class="nav-item">
