@@ -57,8 +57,16 @@
             <a class="nav-link" href="#">Cursos Talleres<span>/</span></a>
             <!-- Dropdown list -->
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{%url 'Instructores'%}">Instructores</a>
                 <a class="dropdown-item" href="{%url 'Talleres'%}">Cursos Talleres</a>
+                <a class="dropdown-item" href="{%url 'Instructores'%}">Instructores</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown dropdown-slide">
+            <a class="nav-link" href="#">Conferencias Magistrales<span>/</span></a>
+            <!-- Dropdown list -->
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{%url 'Conferencias'%}">Conferencias</a>
+                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencistas</a>
               </div>
           </li>
           <li class="nav-item dropdown dropdown-slide">
@@ -66,6 +74,7 @@
               <!-- Dropdown list -->
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="{%url 'Quienes'%}">Quienes somos</a>
+                <a class="dropdown-item" href="{%url 'Patrocinadores'%}">Patrocinadores</a>
                 <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
                 <a class="dropdown-item" href="{%url 'Precios'%}">Costos</a>
               </div>
@@ -74,15 +83,12 @@
             <a class="nav-link" href="{%url 'Calendario'%}">Programa<span>/</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{%url 'Patrocinadores'%}">Patrocinadores<span>/</span></a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{%url 'Contacto'%}">Contacto</a>
           </li>
         </ul>
         <a href="{%url 'Inscripcion'%}" class="ticket">
           <img src="{% static 'core/images/icon/ticket.png'%}" alt="ticket">
-          <span>Inscripción</span>
+          <span><b>Inscripción</b></span>
         </a>
         </div>
     </div>

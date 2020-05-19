@@ -56,6 +56,12 @@ def precios(request):
 def talleres(request):
     return render (request,"core/talleres.html")
 
+def conferencias(request):
+    return render (request,"core/conferencias.html")
+
+def conferencistas(request):
+    return render (request,"core/conferencistas.html")
+
 def charge(request):
     if request.method=='POST':
         print('Data:', request.POST)
