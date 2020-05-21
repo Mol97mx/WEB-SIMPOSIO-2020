@@ -2061,7 +2061,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .sponsors .block .image-block img {
-  height: 55px;
+  height: 100px;
 }
 
 .sponsors .block .image-block:hover {
