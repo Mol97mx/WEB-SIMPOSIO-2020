@@ -58,11 +58,14 @@
 	<div class="container">
         <form action="{%url 'charge'%}" method="post" id="payment-form" class="row">
             {% csrf_token %}
-            <div class="col-md-6">
+            <div class="col-md-12">
             <input required type="text" class="form-control main" id="name" name="name" placeholder="Nombre completo...">
             </div>
             <div class="col-md-6">
             <input required type="text" class="form-control main" id="email" name="email" placeholder="Email...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="telefono" name="telefono" placeholder="Telefono...">
             </div>
             <div class="col-md-12">
             <input required type="text" class="form-control main" id="instituto" name="instituto" placeholder="¿De qué universidad/instituto nos visitas?">
@@ -70,7 +73,9 @@
             <div class="col-md-12">
             <select required name="amount" id="amount" class="form-control main">
                 <option selected value="evento">Simposio $1375</option>
-                <option value="curso">Curso $1375</option>
+                <option value="curso1">Curso Valuación de bienes distintos a la tierra $1375</option>
+                <option value="curso2">Curso Valuación de inmuebles rústicos con presión urbana $1375</option>
+                <option value="curso3">Curso Valuación económica de impacto ambiental por el Método de Valoración Contingente $1375</option>
                 <option value="paquete">Simposio y Curso $2500</option>
             </select>
             </div>

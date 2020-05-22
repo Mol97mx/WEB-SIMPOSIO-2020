@@ -38,6 +38,9 @@ def semblanzaOPV(request):
 def semblanzaNFL(request):
     return render (request,"core/semblanzaNFL.html")
 
+def semblanzaMLL(request):
+    return render (request,"core/semblanzaMLL.html")
+
 def patrocinadores(request):
     return render (request,"core/patrocinadores.html")
 
@@ -62,15 +65,24 @@ def conferencias(request):
 def conferencistas(request):
     return render (request,"core/conferencistas.html")
 
+def ponencias(request):
+    return render (request,"core/ponencias.html")
+
 def charge(request):
     if request.method=='POST':
         print('Data:', request.POST)
         if request.POST['amount']=='evento':
             amount=int(1375)
             desc="Inscripción al simposio"
-        elif request.POST['amount']=='curso':
+        elif request.POST['amount']=='curso1':
             amount=int(1375)
-            desc="Inscripción a curso"
+            desc="Inscripción a curso Valuación de bienes distintos a la tierra"
+        elif request.POST['amount']=='curso2':
+            amount=int(1375)
+            desc="Inscripción a curso Valuación de inmuebles rústicos con presión urbana"
+        elif request.POST['amount']=='curso3':
+            amount=int(1375)
+            desc="Inscripción a curso Valuación económica de impacto ambiental por el Método de Valoración Contingente"
         else:
             amount=int(2500)
             desc="Inscripción a cursos y simposio"
@@ -80,6 +92,7 @@ def charge(request):
                 email=request.POST['email'],
                 name=request.POST['name'],
                 description=request.POST['instituto'],
+                phone=reques.POST['telefono'],
                 source=request.POST['stripeToken']
             )
             cargo=stripe.Charge.create(

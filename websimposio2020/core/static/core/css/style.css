@@ -1345,7 +1345,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .schedule .schedule-contents .schedule-item ul li .speaker {
-  width: 30%;
+  width: 55%;
 }
 
 @media (max-width: 991px) {
@@ -1373,17 +1373,11 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .schedule .schedule-contents .schedule-item ul li .subject {
-  width: 30%;
+  width: 20%;
 }
 
 @media (max-width: 991px) {
   .schedule .schedule-contents .schedule-item ul li .subject {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .schedule .schedule-contents .schedule-item ul li .venue {
     display: none;
   }
 }
@@ -1557,7 +1551,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .schedule.two .schedule-contents .schedule-item ul li .time {
-  width: 20%;
+  width: 30%;
 }
 
 @media (max-width: 767px) {
@@ -1573,7 +1567,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .schedule.two .schedule-contents .schedule-item ul li .speaker {
-  width: 30%;
+  width: 55%;
 }
 
 @media (max-width: 991px) {
@@ -1595,21 +1589,11 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .schedule.two .schedule-contents .schedule-item ul li .subject {
-  width: 30%;
+  width: 25%;
 }
 
 @media (max-width: 991px) {
   .schedule.two .schedule-contents .schedule-item ul li .subject {
-    display: none;
-  }
-}
-
-.schedule.two .schedule-contents .schedule-item ul li .venue {
-  width: 18.6%;
-}
-
-@media (max-width: 767px) {
-  .schedule.two .schedule-contents .schedule-item ul li .venue {
     display: none;
   }
 }
