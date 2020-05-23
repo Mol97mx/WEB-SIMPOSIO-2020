@@ -1,0 +1,75 @@
+{%extends 'core/base.html'%}
+{%block title%}Semblanza{%endblock%}
+{%block content%}
+{%load static %}
+<!--================================
+=            Page Title            =
+=================================-->
+
+<section class="page-title bg-title overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="title">
+					<h3>Detalles del Conferencista</h3>
+				</div>
+				<ol class="breadcrumb p-0 m-0">
+				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Portada</a></li>
+				  <li class="breadcrumb-item active"> Detalles del conferencista</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Page Title  ====-->
+
+
+<section class="section single-speaker">
+	<div class="container">
+		<div class="block">
+			<div class="row">
+				<div class="col-lg-5 col-md-6 align-self-md-center">
+					<div class="image-block">
+						<img src="{% static 'core/images/speakers/PBL.jpg'%}" class="img-fluid" alt="speaker">
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-6 align-self-center">
+					<div class="content-block">
+						<div class="name">
+							<h3>Patricia Balvanera Levy</h3>
+						</div>
+						<div class="profession">
+							<p>Doctora en Ecología</p>
+						</div>
+						<div class="details">
+                            <p style="text-align:justify">Me formé como Bióloga, egresada de la Universidad Autónoma Metropolitana Iztapalapa, con Maestría en Ciencias Biológicas y Doctorado en Ecología por la Universidad Nacional Autónoma de México. Empecé estudiando las interacciones entre biodiversidad y bienestar humano a través de la etnobotánica, luego de los servicios ecosistémicos y ahora a través de los sistemas socioecológicos.
+Patricia Balvanera se formó como bióloga, etnobotánica y ecóloga de comunidades vegetales. Ha estudiado el sistema socio-ecológico del bosque tropical seco de la región de Chamela-Cuixmala en colaboración con ecólogos de poblaciones, de comunidades, de ecosistemas, políticos, y con geógrafos, economistas, antropólogos y sociólogos. Modela servicios ecosistémicos a distintas escalas para explorar las interacciones entre estos. Colabora en proyectos interdisciplinarios de síntesis, de investigación y monitoreo y de generación de documentos para el diseño de políticas públicas nacionales e internacionales. Imparte cursos sobre servicios ecosistémicos, sistemas socio-ecológicos y sustentabilidad a nivel licenciatura y posgrado. Es editora temática de cuatro revistas internacionales arbitradas indizadas.
+Mis líneas de investigación son:
+1.	Servicios ecosistémicos de bosques tropicales: Estudiamos la oferta potencial, entrega, valor sociocultural y valor económico de servicios de bosques tropicales transformados, secundarios y maduros
+2.	Interacciones entre biodiversidad, servicios y bienestar humano: Estudiamos las disyuntivas que surgen de promover la mitigación del cambio climático, el mantenimiento de la biodiversidad o el desarrollo
+3.	Bienestar subjetivo y valores: Estudiamos cómo las visiones del mundo sobre la biodiversidad y sus servicios se vinculan con el manejo de los servicios ecosistémicos
+<br/><br/><br/><a href="http://www.iies.unam.mx/laboratorios/biodiversidad-bienestar-humano/">Página personal</a>
+</p>
+						</div>
+						<div class="social-profiles">
+							<h5>Redes sociales</h5>
+							<ul class="list-inline social-list">
+								<li class="list-inline-item">
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{%endblock%}

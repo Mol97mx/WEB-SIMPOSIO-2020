@@ -41,6 +41,9 @@ def semblanzaNFL(request):
 def semblanzaMLL(request):
     return render (request,"core/semblanzaMLL.html")
 
+def semblanzaPBL(request):
+    return render (request,"core/semblanzaPBL.html")
+
 def patrocinadores(request):
     return render (request,"core/patrocinadores.html")
 

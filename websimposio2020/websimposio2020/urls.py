@@ -35,6 +35,7 @@ urlpatterns = [
     path('semblanzaOPV/',core_views.semblanzaOPV,name="SemblanzaOPV"),
     path('semblanzaNFL/',core_views.semblanzaNFL,name="SemblanzaNFL"),
     path('semblanzaMLL/',core_views.semblanzaMLL,name="SemblanzaMLL"),
+    path('semblanzaPBL/',core_views.semblanzaPBL,name="SemblanzaPBL"),
     path('patrocinadores/',core_views.patrocinadores,name="Patrocinadores"),
     path('talleres/',core_views.talleres,name="Talleres"),
     path('contacto/',core_views.contacto,name="Contacto"),
