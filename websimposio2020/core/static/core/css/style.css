@@ -79,7 +79,6 @@ ul.social-links li a i {
 
 .overlay:before {
   content: '';
-  background: url(../images/background/objects.png) no-repeat;
   position: absolute;
   top: 0;
   left: 0;
