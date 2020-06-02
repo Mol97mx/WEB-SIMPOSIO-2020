@@ -1,0 +1,118 @@
+{%extends 'core/base.html'%}
+{%block title%}Talleres{%endblock%}
+{%block content%}
+{%load static %}
+<!--================================
+=            Page Title            =
+=================================-->
+
+<section class="page-title bg-title overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="title">
+					<h3>Cursos Talleres</h3>
+				</div>
+				<ol class="breadcrumb p-0 m-0">
+				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Portada</a></li>
+				  <li class="breadcrumb-item active">Cursos Talleres</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Page Title  ====-->
+
+
+<!--================================
+=            News Posts            =
+=================================-->
+
+<section class="news section">
+	<div class="container">
+		<div class="row mt-30">
+			<div class="col-lg-4 col-md-6 col-sm-8 col-10 m-auto">
+				<div class="blog-post">
+					<div class="post-thumb">
+						<a href="#">
+							<img src="{% static 'core/images/news/curso de impacto ambiental_v3.png'%}" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-content">
+						<div class="date">
+							<h4>27 <span>Agosto</span></h4>
+						</div>
+						<div class="post-title">
+							<h2><a href="#">Valuación económica de impacto ambiental por el Método de Valoración Contingente. Aplicaciones en México y en el contexto global Estudio de caso: El derrame de petróleo en la plataforma Deepwater Horizon, BP en el Golfo de México en 2010.</a></h2>
+						</div>
+						<div class="post-meta">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a href="{%url 'SemblanzaOPV'%}">Oscar Pérez Veyna</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="{%url 'SemblanzaNFL'%}">Netzahualcoyotl Flores Lázaro</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-8 col-10 m-auto">
+				<div class="blog-post">
+					<div class="post-thumb">
+						<a href="#">
+							<img src="{% static 'core/images/news/Bienes distintos.jpg'%}" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-content">
+						<div class="date">
+							<h4>27 <span>Agosto</span></h4>
+						</div>
+						<div class="post-title">
+							<h2><a href="#">Valuación de bienes distintos a la tierra.</a></h2>
+						</div>
+						<div class="post-meta">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a href="{%url 'SemblanzaGPA'%}">Gabriel Palacios Arroyo</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 m-md-auto col-sm-8 col-10 m-auto">
+				<div class="blog-post">
+					<div class="post-thumb">
+						<a href="news-single.html">
+							<img src="{% static 'core/images/news/Val predios rusticos con presion urbana.jpg'%}" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-content">
+						<div class="date">
+							<h4>27 <span>Agosto</span></h4>
+						</div>
+						<div class="post-title">
+							<h2><a href="#">Valuación de inmuebles rústicos con presión urbana, influencia de infraestructura, riesgos y desastres naturales.</a></h2>
+						</div>
+						<div class="post-meta">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a href="{%url 'SemblanzaCCM'%}">César Cantú Martínez</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="{%url 'SemblanzaVMHM'%}">Víctor Manuel Hernández Madrigal</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of News Posts  ====-->
+{%endblock%}

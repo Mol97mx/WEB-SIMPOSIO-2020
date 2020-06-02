@@ -1,0 +1,103 @@
+{%extends 'core/base.html'%}
+{%block title%}Inscripción{%endblock%}
+{%block content%}
+<!--===================================
+=            Pricing Table            =
+====================================-->
+
+<section class="section pricing">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3><span class="alternate">Inscribete</span></h3>
+					<p>Aceptamos pago con tarjeta</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<!-- Pricing Item -->
+				<div class="pricing-item">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Curso taller</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2><span>$</span>1375.00</h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>Acceso en linea</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>1 curso taller</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="{%url 'Inscripcion'%}" class="btn btn-transparent-md">Inscribete</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<!-- Pricing Item -->
+				<div class="pricing-item featured">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Simposio</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2><span>$</span>1375.00</h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>Acceso en linea</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Asistencia al simposio</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="{%url 'Inscripcion'%}" class="btn btn-main-md">Inscribete</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 m-auto">
+				<!-- Pricing Item -->
+				<div class="pricing-item">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Simposio y curso taller</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2><span>$</span>2500.00</h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>Acceso en linea</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Asistencia al simposio</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>3 cursos taller</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="{%url 'Inscripcion'%}" class="btn btn-transparent-md">Inscribete</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Pricing Table  ====-->
+{%endblock%}

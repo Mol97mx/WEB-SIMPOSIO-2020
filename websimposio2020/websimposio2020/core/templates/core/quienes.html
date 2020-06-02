@@ -1,0 +1,145 @@
+{%extends 'core/base.html'%}
+{%block title%}Inscripción{%endblock%}
+{%block content%}
+{%load static %}
+<!--================================
+=            Page Title            =
+=================================-->
+
+<section class="page-title bg-title overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="title">
+					<h3>¿Quienes somos?</h3>
+				</div>
+				<ol class="breadcrumb p-0 m-0">
+				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Portada</a></li>
+				  <li class="breadcrumb-item active">¿Quienes somos?</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Page Title  ====-->
+
+
+<!--===========================
+=            About            =
+============================-->
+
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 align-self-center">
+				<div class="image-block bg-about">
+					<img class="img-fluid" src="{% static 'core/images/speakers/logo_invaf.png'%}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-6 align-self-center">
+				<div class="content-block">
+					<h2>Acerca del <span class="alternate">simposio</span></h2>
+					<div class="description-one">
+						<p>
+							La edición XVI del Simposio Nacional y VIII Internacional de Valuación Rural, representa un excelente espacio en donde especialistas y público en general interesados en la Valuación Rural, podrán analizar, discutir y reflexionar sobre aspectos metodológicos, desarrollo profesional, avances en la investigación y la academia.
+						</p>
+					</div>
+					<div class="description-two">
+						<p>En este simposio hemos reconocido siempre que el binomio academia-gremio es indisoluble, fundamental y sobre todo multidisciplinario. Por ello, estamos convocando una vez más a profesionistas y especialistas en Ciencias de la Tierra, Ciencias Ambientales, Investigaciones Agroforestales, Agronomía, Economía, Valuación, Riesgos y otras áreas afines, para abordar el tema: “El valor del suelo ante cambios por uso, por derecho de vía y desastres”. Si bien la influencia del cambio de uso en el valor de suelo ha sido ampliamente discutida, no sucede lo mismo sobre el efecto de otras actividades humanas y fenómenos naturales en la Valuación Rural, particularmente en la cuantificación monetaria para fines de prevención o impacto por desastres naturales.</p>
+					</div>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<a href="{%url 'Inscripcion'%}" class="btn btn-main-md">inscribete</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="{%url 'Acerca'%}" class="btn btn-transparent-md">Mas...</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of About  ====-->
+
+<!--====  End of Speakers  ====-->
+
+<!--=================================
+=            Testimonial            =
+==================================-->
+
+<section class="section testimonial">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3><span class="alternate">¿Quiénes somos?</span></h3>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-20">
+			<div class="col-lg-4 col-md-6">
+				<!-- Testimonial -->
+				<div class="testimonial-item">
+					<!-- Given Comment -->
+					<div class="comment">
+						<p>Ser el principal referente en materia de valuación del territorio rural, utilizando metodologías emergentes con un enfoque global, pero sin perder de vista las particularidades de lo local, ya que actualmente la sociedad demanda estudios técnica y científicamente demostrables.</p>
+					</div>
+					<div class="person">
+						<div class="media">
+							<div class="media-body">
+								<!-- Person Name -->
+								<div class="name"><p>Misión</p></div>
+								<!-- Profession -->
+								<div class="profession"><p>INVAF Michoacán</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<!-- Testimonial -->
+				<div class="testimonial-item">
+					<!-- Given Comment -->
+					<div class="comment">
+						<p>Ser una institución líder de estudios y servicios técnicos en materia de valuación rural con los más altos estándares de calidad, a la vanguardia tecnológica de competencia internacional para la gestión y desarrollo de valoración integral del territorio, construyendo y proponiendo modelos innovadores de valuación de bienes en beneficio de la sociedad.</p>
+					</div>
+					<div class="person">
+						<div class="media">
+							<div class="media-body">
+								<!-- Person Name -->
+								<div class="name"><p>Visión</p></div>
+								<!-- Profession -->
+								<div class="profession"><p>INVAF Michoacán</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mx-auto">
+				<!-- Testimonial -->
+				<div class="testimonial-item">
+					<!-- Given Comment -->
+					<div class="comment">
+						<p>Agrupar a personas físicas y morales relacionadas con el sector rural, con capacidad profesional, altos estándares de calidad, ética y honorabilidad que garanticen los juicios de valor en el medio rural. </p>
+					</div>
+					<div class="person">
+						<div class="media">
+							<div class="media-body">
+								<!-- Person Name -->
+								<div class="name"><p>Objetivo</p></div>
+								<!-- Profession -->
+								<div class="profession"><p>INVAF Michoacán</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Testimonial  ====-->
+{%endblock%}
