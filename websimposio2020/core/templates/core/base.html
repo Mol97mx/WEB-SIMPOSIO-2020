@@ -65,12 +65,9 @@
             <a class="nav-link" href="#">Simposio<span>/</span></a>
             <!-- Dropdown list -->
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{%url 'Calendario'%}">Panel de expertos</a> 
-                <a class="dropdown-item" href="{%url 'Calendario'%}">Panelistas</a>
-                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencias magistrales</a>
-                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencistas</a>
-                <a class="dropdown-item" href="{%url 'Ponencias'%}">Ponencias</a>
-                <a class="dropdown-item" href="#">Ponentes</a>
+                <a class="dropdown-item" href="{%url 'Patrocinadores'%}">Patrocinadores</a>
+                <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
+                <a class="dropdown-item" href="{%url 'Precios'%}">Costos</a>
               </div>
           </li>
           <li class="nav-item dropdown dropdown-slide">
@@ -78,13 +75,18 @@
               <!-- Dropdown list -->
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="{%url 'Quienes'%}">Quienes somos</a>
-                <a class="dropdown-item" href="{%url 'Patrocinadores'%}">Patrocinadores</a>
-                <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
-                <a class="dropdown-item" href="{%url 'Precios'%}">Costos</a>
               </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item dropdown dropdown-slide">
             <a class="nav-link" href="{%url 'Calendario'%}">Programa<span>/</span></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{%url 'Calendario'%}">Panel de expertos</a> 
+                <a class="dropdown-item" href="{%url 'Calendario'%}">Panelistas</a>
+                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencias magistrales</a>
+                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencistas</a>
+                <a class="dropdown-item" href="{%url 'Ponencias'%}">Ponencias</a>
+                <a class="dropdown-item" href="#">Ponentes</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{%url 'Contacto'%}">Contacto</a>
