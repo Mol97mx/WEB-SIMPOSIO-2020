@@ -1,43 +1,6 @@
 {%extends 'core/base.html'%}
 {%block title%}Inscripción{%endblock%}
 {%block content%}
-
-<style type="text/css">
-    /**
-    * The CSS shown here will not be introduced in the Quickstart guide, but shows
-    * how you can use CSS to style your Element's container.
-    */
-    .StripeElement {
-    box-sizing: border-box;
-
-    height: 40px;
-
-    padding: 10px 12px;
-
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: white;
-
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
-    }
-
-    .StripeElement--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-    }
-
-    .StripeElement--invalid {
-    border-color: #fa755a;
-    }
-
-    .StripeElement--webkit-autofill {
-    background-color: #fefde5 !important;
-    }
-</style>
-
-<script src="https://js.stripe.com/v3/"></script>
-
 <section class="page-title bg-title overlay-dark">
 	<div class="container">
 		<div class="row">
@@ -56,8 +19,10 @@
 
 <section class="section contact-form">
 	<div class="container">
-        <form action="{%url 'charge'%}" method="post" id="payment-form" class="row">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="payment-form" class="row" target="_top">
             {% csrf_token %}
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="3UFDZW3S3ZTBY">
             <div class="col-md-12">
             <input required type="text" class="form-control main" id="name" name="name" placeholder="Nombre completo...">
             </div>
@@ -69,102 +34,19 @@
             </div>
             <div class="col-md-12">
             <input required type="text" class="form-control main" id="instituto" name="instituto" placeholder="¿De qué universidad/instituto nos visitas?">
-            </div>
             <div class="col-md-12">
-            <select required name="amount" id="amount" class="form-control main">
-                <option selected value="evento">Simposio $1375</option>
-                <option value="curso1">Curso Valuación de bienes distintos a la tierra $1375</option>
-                <option value="curso2">Curso Valuación de inmuebles rústicos con presión urbana $1375</option>
-                <option value="curso3">Curso Valuación económica de impacto ambiental por el Método de Valoración Contingente $1375</option>
-                <option value="paquete">Simposio y Curso $2500</option>
-            </select>
-            </div>
-            <div class="col-md-12">
-                <label for="card-element">Tarjeta de crédito o débito</label>
-                <br>
-                <div id="card-element">
-                    <!-- A Stripe Element will be inserted here. -->
-                </div>
-                <!-- Used to display form errors. -->
-                <div id="card-errors" role="alert">
-                </div>
-            </div>
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-main-md">Pagar</button>
+                <input type="hidden" name="on0" class="form-control main" value="Costos">
+                <select name="os0">
+                    <option value="Curso Valuación de bienes distintos a la tierra">Curso Valuación de bienes distintos a la tierra $1,375.00 MXN</option>
+                    <option value="Curso Valuación de inmuebles rústicos con presión urbana">Curso Valuación de inmuebles rústicos con presión urbana $1,375.00 MXN</option>
+                    <option value="Curso Valuación económica de impacto ambiental por el Método de">Curso Valuación económica de impacto ambiental por el Método de $1,375.00 MXN</option>
+                    <option value="Simposio y curso">Simposio y curso $2,500.00 MXN</option>
+                </select>
+                <input type="hidden" name="currency_code" value="MXN">
+                <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
             </div>
         </form>
     </div>
 </section>
-
-<script>
-// Create a Stripe client.
-var stripe = Stripe('pk_test_z493Eh8OiSN9fRbIeMbRqmzk00yXomilro');
-
-// Create an instance of Elements.
-var elements = stripe.elements();
-
-// Custom styling can be passed to options when creating an Element.
-// (Note that this demo uses a wider set of styles than the guide below.)
-var style = {
-    base: {
-        color: '#32325d',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        fontSmoothing: 'antialiased',
-        fontSize: '16px',
-        '::placeholder': {
-            color: '#aab7c4'
-        }
-    },
-    invalid: {
-        color: '#fa755a',
-        iconColor: '#fa755a'
-    }
-};
-
-// Create an instance of the card Element.
-var card = elements.create('card', {style: style});
-
-// Add an instance of the card Element into the `card-element` <div>.
-card.mount('#card-element');
-
-// Handle real-time validation errors from the card Element.
-card.addEventListener('change', function(event) {
-    var displayError = document.getElementById('card-errors');
-    if (event.error) {
-        displayError.textContent = event.error.message;
-    } else {
-        displayError.textContent = '';
-    }
-});
-
-// Handle form submission.
-var form = document.getElementById('payment-form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    stripe.createToken(card).then(function(result) {
-        if (result.error) {
-            // Inform the user if there was an error.
-            var errorElement = document.getElementById('card-errors');
-            errorElement.textContent = result.error.message;
-        } else {
-            // Send the token to your server.
-            stripeTokenHandler(result.token);
-        }
-    });
-});
-
-// Submit the form with the token ID.
-function stripeTokenHandler(token) {
-    // Insert the token ID into the form so it gets submitted to the server
-    var form = document.getElementById('payment-form');
-    var hiddenInput = document.createElement('input');
-    hiddenInput.setAttribute('type', 'hidden');
-    hiddenInput.setAttribute('name', 'stripeToken');
-    hiddenInput.setAttribute('value', token.id);
-    form.appendChild(hiddenInput);
-    // Submit the form
-    form.submit();
-}
-</script>
 {%endblock%}
