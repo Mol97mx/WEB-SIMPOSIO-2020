@@ -9,9 +9,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   font-family: "Montserrat", sans-serif;
   color: #c96f1a;
+  font-weight: 600;
+}
+
+h6
+{
+  font-family: "Montserrat", sans-serif;
+  color:rgb(1, 129, 44);
   font-weight: 600;
 }
 
