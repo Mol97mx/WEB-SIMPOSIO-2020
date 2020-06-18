@@ -10,9 +10,6 @@ def home(request):
 
 def informacion(request):
     return render (request,"core/informacion.html")
-
-def inscripcion(request):
-    return render (request,"core/inscripcion.html")
     
 def resumenes(request):
     return render (request,"core/resumenes.html")
@@ -73,11 +70,3 @@ def ponencias(request):
 
 def simposio(request):
     return render (request,"core/simposio.html")
-
-def success(request, args):
-    amount=args
-    return render(request,"core/success.html",{'amount':amount})
-
-def failure(request, args):
-    mensaje=args
-    return render(request,"core/failure.html",{'mensaje':mensaje})

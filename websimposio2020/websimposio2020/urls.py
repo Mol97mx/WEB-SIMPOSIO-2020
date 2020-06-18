@@ -18,12 +18,12 @@ from django.urls import path
 #from django.conf.urls import include, url
 from core import views as core_views
 from Galeria import views as galeria_views
+from registros import views as registros_views
 from django.conf import settings
 
 urlpatterns = [
     path('',core_views.home,name="Home"),
     path('informacion/',core_views.informacion,name="Informacion"),
-    path('inscripcion/',core_views.inscripcion,name="Inscripcion"),
     path('resumenes/',core_views.resumenes,name="Resumenes"),
     path('instructores/',core_views.instructores,name="Instructores"),
     path('conferencias/',core_views.conferencias,name="Conferencias"),
@@ -43,10 +43,9 @@ urlpatterns = [
     path('quienes/',core_views.quienes,name="Quienes"),
     path('precios/',core_views.precios,name="Precios"),
     path('simposio/',core_views.simposio,name="Simposio"),
-    path('success/<str:args>',core_views.success,name="success"),
-    path('failure/<str:args>',core_views.failure,name="failure"),
     path('calendario/',core_views.calendario,name="Calendario"),
     path('galeria/',galeria_views.galeria,name="Galeria"),
+    path('inscripcion/',registros_views.inscripcion,name="Inscripcion"),
     path('admin/', admin.site.urls),
 ]
 

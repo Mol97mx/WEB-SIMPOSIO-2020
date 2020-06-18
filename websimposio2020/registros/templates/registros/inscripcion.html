@@ -1,0 +1,60 @@
+{%extends 'core/base.html'%}
+{%block title%}Inscripción{%endblock%}
+{%block content%}
+<section class="page-title bg-title overlay-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="title">
+					<h3>Inscribete</h3>
+				</div>
+				<ol class="breadcrumb p-0 m-0">
+				  <li class="breadcrumb-item"><a href="{%url 'Home'%}">Portada</a></li>
+				  <li class="breadcrumb-item active">Inscribete</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section contact-form">
+	<div class="container">
+    {% if messages %}
+        {% for message in messages %}
+            <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+        <form action="" method="post" id="payment-form" class="row" target="_top">
+            {% csrf_token %}
+            {{form.as_p}}
+            <!--<div class="col-md-6">
+            <input required type="text" class="form-control main" id="name" name="name" placeholder="Nombre...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="apellidop" name="apellidop" placeholder="Apellido paterno...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="apellidom" name="apellidon" placeholder="Apellido materno...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="email" name="email" placeholder="Email...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="telefono" name="telefono" placeholder="Telefono...">
+            </div>
+            <div class="col-md-6">
+            <input required type="text" class="form-control main" id="instituto" name="instituto" placeholder="¿De qué universidad/instituto nos visitas?">
+            <div class="col-md-12">
+                <select name="opcion">
+                    <option value="Curso Valuacion de bienes distintos a la tierra">Curso Valuación de bienes distintos a la tierra $1,375.00 MXN</option>
+                    <option value="Curso Valuacion de inmuebles rusticos con presion urbana">Curso Valuación de inmuebles rústicos con presión urbana $1,375.00 MXN</option>
+                    <option value="Curso Valuacion economica de impacto ambiental por el Metod">Curso Valuación económica de impacto ambiental por el Método de Valoración Contingente $1,375.00 MXN</option>
+                    <option value="Simposio y curso">Simposio y curso $2,500.00 MXN</option>
+                </select>
+            </div>-->
+            <div class="col-12 text-center">
+				<button type="submit" class="btn btn-main-md">Inscripcion</button>
+			</div>
+        </form>
+    </div>
+</section>
+{%endblock%}
