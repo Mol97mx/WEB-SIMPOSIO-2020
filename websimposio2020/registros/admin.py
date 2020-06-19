@@ -4,7 +4,7 @@ from .models import registro
 
 class registroAdmin(admin.ModelAdmin):
     readonly_fields=('fechaderegistro','fechademodificacion')
-    list_display = ('nombre','apellidop','apellidom','email','opcion')
+    list_display = ('nombre','apellidop','apellidom','email','opcion','pagado')
     ordering = ('nombre','apellidop','apellidom')
     search_fields=('nombre','apellidop','apellidom','email')
     list_filter=('nombre','apellidop','email','opcion')

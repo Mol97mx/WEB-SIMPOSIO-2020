@@ -70,3 +70,6 @@ def ponencias(request):
 
 def simposio(request):
     return render (request,"core/simposio.html")
+
+def gracias(request):
+    return render (request,"core/gracias.html")

@@ -46,6 +46,7 @@ urlpatterns = [
     path('calendario/',core_views.calendario,name="Calendario"),
     path('galeria/',galeria_views.galeria,name="Galeria"),
     path('inscripcion/',registros_views.inscripcion,name="Inscripcion"),
+    path('gracias/',core_views.gracias,name="Gracias"),
     path('admin/', admin.site.urls),
 ]
 

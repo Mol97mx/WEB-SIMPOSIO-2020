@@ -19,38 +19,46 @@
 <section class="section contact-form">
 	<div class="container">
     {% if messages %}
+    <div class="row">
+        <div class="col-sm-12">
         {% for message in messages %}
-            <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+            <p {% if 'success' in message.tags %} class="alert alert-success"{% endif %}>{{ message }}</p>
         {% endfor %}
+        </div>
+    </div>
     {% endif %}
         <form action="" method="post" id="payment-form" class="row" target="_top">
             {% csrf_token %}
-            {{form.as_p}}
-            <!--<div class="col-md-6">
-            <input required type="text" class="form-control main" id="name" name="name" placeholder="Nombre...">
-            </div>
             <div class="col-md-6">
-            <input required type="text" class="form-control main" id="apellidop" name="apellidop" placeholder="Apellido paterno...">
+            {{form.nombre}}
             </div>
+            {{form.nombre.errors}}
             <div class="col-md-6">
-            <input required type="text" class="form-control main" id="apellidom" name="apellidon" placeholder="Apellido materno...">
+            {{form.apellidop}}
             </div>
+            {{form.apellidop.errors}}
             <div class="col-md-6">
-            <input required type="text" class="form-control main" id="email" name="email" placeholder="Email...">
+            {{form.apellidom}}
             </div>
+            {{form.apellidom.errors}}
             <div class="col-md-6">
-            <input required type="text" class="form-control main" id="telefono" name="telefono" placeholder="Telefono...">
+            {{form.email}}
             </div>
+            {{form.email.errors}}
             <div class="col-md-6">
-            <input required type="text" class="form-control main" id="instituto" name="instituto" placeholder="¿De qué universidad/instituto nos visitas?">
+            {{form.telefono}}
+            </div>
+            {{form.telefono.errors}}
+            <div class="col-md-6">
+            {{form.universidad}}
+            </div>
+            {{form.universidad.errors}}
+            <div class="col-md-6">
+                {{form.opcion}}
+            </div>
             <div class="col-md-12">
-                <select name="opcion">
-                    <option value="Curso Valuacion de bienes distintos a la tierra">Curso Valuación de bienes distintos a la tierra $1,375.00 MXN</option>
-                    <option value="Curso Valuacion de inmuebles rusticos con presion urbana">Curso Valuación de inmuebles rústicos con presión urbana $1,375.00 MXN</option>
-                    <option value="Curso Valuacion economica de impacto ambiental por el Metod">Curso Valuación económica de impacto ambiental por el Método de Valoración Contingente $1,375.00 MXN</option>
-                    <option value="Simposio y curso">Simposio y curso $2,500.00 MXN</option>
-                </select>
-            </div>-->
+            {{form.opcion.errors}}
+            </div>
             <div class="col-12 text-center">
 				<button type="submit" class="btn btn-main-md">Inscripcion</button>
 			</div>
