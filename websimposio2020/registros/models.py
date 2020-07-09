@@ -16,6 +16,8 @@ class registro(models.Model):
     email=models.EmailField()
     telefono=models.CharField(max_length=20)
     universidad=models.CharField(max_length=50)
+    estado=models.CharField(max_length=50)
+    ciudad=models.CharField(max_length=50)
     opcion=models.CharField(max_length=100,verbose_name="Paquete seleccionado",choices=Opciones_paquetes)
     pagado=models.CharField(max_length=50,choices=OPCIONES,default='pendiente')
     fechaderegistro=models.DateTimeField(auto_now_add=True,verbose_name="Fecha de registro")
