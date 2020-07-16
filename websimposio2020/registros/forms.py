@@ -3,29 +3,50 @@ from .models import registro
 
 class Formularioregistro(forms.ModelForm):
     nombre = forms.CharField(required=True, widget=forms.TextInput(
-        attrs={'class':'form-control main', 'placeholder':'Nombre...'}
+        attrs={'class':'form-control main', 'placeholder':'Nombre completo o Razón social...'}
     ))
-    apellidop = forms.CharField(required=True, widget=forms.TextInput(
-        attrs={'class':'form-control main', 'placeholder':'Apellido paterno...'}
+    rfc = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'RFC...'}
     ))
-    apellidom = forms.CharField(required=True, widget=forms.TextInput(
-        attrs={'class':'form-control main', 'placeholder':'Apellido materno...'}
+    calle = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Calle...'}
     ))
-    email = forms.EmailField(required=True, widget=forms.EmailInput(
-        attrs={'class':'form-control main', 'placeholder':'Email...'}
+    numeroexterior = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Numero...'}
     ))
-    telefono = forms.CharField(required=True, widget=forms.TextInput(
-        attrs={'class':'form-control main', 'placeholder':'Telefono...'}
+    numerointerior = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Numero interior...'}
+    ))
+    colonia = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Colonia...'}
+    ))
+    ciudad = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Municipio...'}
     ))
     estado= forms.CharField(required=True, widget=forms.TextInput(
         attrs={'class':'form-control main', 'placeholder':'Estado...'}
     ))
-    ciudad = forms.CharField(required=True, widget=forms.TextInput(
-        attrs={'class':'form-control main', 'placeholder':'Ciudad...'}
+    pais = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'País...'}
+    ))
+    telefono = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Telefono...'}
+    ))
+    email = forms.EmailField(required=True, widget=forms.EmailInput(
+        attrs={'class':'form-control main', 'placeholder':'Email...'}
+    ))
+    cfdi = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Uso del CFDI...'}
+    ))
+    formadepago = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Forma de pago...'}
+    ))
+    metododepago = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Metodo de pago...'}
     ))
     universidad = forms.CharField(required=True, widget=forms.TextInput(
         attrs={'class':'form-control main', 'placeholder':'¿De qué universidad nos visitas?'}
     ))
     class Meta:
         model=registro
-        fields=['nombre','apellidop','apellidom','email','telefono','ciudad','estado','universidad','opcion']
+        fields=['nombre','rfc','calle','numeroexterior','numerointerior','colonia','ciudad','estado','pais','email','telefono','cfdi','formadepago','metododepago','universidad','opcion']
