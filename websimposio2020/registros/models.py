@@ -19,6 +19,7 @@ class registro(models.Model):
     numeroexterior=models.CharField(max_length=6)
     numerointerior=models.CharField(max_length=6,blank=True)
     colonia=models.CharField(max_length=50)
+    cp=models.CharField(max_length=10)
     ciudad=models.CharField(max_length=50)
     estado=models.CharField(max_length=50)
     pais=models.CharField(max_length=50)

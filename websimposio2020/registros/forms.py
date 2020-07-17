@@ -20,6 +20,9 @@ class Formularioregistro(forms.ModelForm):
     colonia = forms.CharField(required=True, widget=forms.TextInput(
         attrs={'class':'form-control main', 'placeholder':'Colonia...'}
     ))
+    cp = forms.CharField(required=True, widget=forms.TextInput(
+        attrs={'class':'form-control main', 'placeholder':'Codigo Postal...'}
+    ))
     ciudad = forms.CharField(required=True, widget=forms.TextInput(
         attrs={'class':'form-control main', 'placeholder':'Municipio...'}
     ))
@@ -49,4 +52,4 @@ class Formularioregistro(forms.ModelForm):
     ))
     class Meta:
         model=registro
-        fields=['nombre','rfc','calle','numeroexterior','numerointerior','colonia','ciudad','estado','pais','email','telefono','cfdi','formadepago','metododepago','universidad','opcion']
+        fields=['nombre','rfc','calle','numeroexterior','numerointerior','colonia','cp','ciudad','estado','pais','email','telefono','cfdi','formadepago','metododepago','universidad','opcion']
