@@ -14,7 +14,7 @@ class Formularioregistro(forms.ModelForm):
     numeroexterior = forms.CharField(required=True, widget=forms.TextInput(
         attrs={'class':'form-control main', 'placeholder':'Numero...'}
     ))
-    numerointerior = forms.CharField(required=True, widget=forms.TextInput(
+    numerointerior = forms.CharField( widget=forms.TextInput(
         attrs={'class':'form-control main', 'placeholder':'Numero interior...'}
     ))
     colonia = forms.CharField(required=True, widget=forms.TextInput(
