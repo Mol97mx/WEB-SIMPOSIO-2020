@@ -3471,7 +3471,7 @@ ul.pagination .active a {
   display: flex;
   padding: 0;
   width: 1700%;
-  animation: cambio 40s infinite alternate;
+  animation: cambio 85s infinite alternate;
   animation-timing-function: ease-in;
 }
 
@@ -3485,12 +3485,40 @@ ul.pagination .active a {
 }
 @keyframes cambio{
   0% {margin-left: 0;}
-  20% {margin-left: 0;}
-  25% {margin-left: -100%;}
-  45% {margin-left: -100%;}
-  50% {margin-left: -200%;}
-  70% {margin-left: -200%;}
-  75% {margin-left: -300%;}
-  100% {margin-left: -300%;}
+  4.7% {margin-left: 0;}
+  5.8% {margin-left: -100%;}
+  10.5% {margin-left: -100%;}
+  11.6% {margin-left: -200%;}
+  16.3% {margin-left: -200%;}
+  17.4% {margin-left: -300%;}
+  22.1% {margin-left: -300%;}
+  23.2% {margin-left: -400%;}
+  27.9% {margin-left: -400%;}
+  29% {margin-left: -500%;}
+  33.7% {margin-left: -500%;}
+  34.8% {margin-left: -600%;}
+  39.5% {margin-left: -600%;}
+  40.6% {margin-left: -700%;}
+  45.3% {margin-left: -700%;}
+  46.4% {margin-left: -800%;}
+  51.1% {margin-left: -800%;}
+  52.2% {margin-left: -900%;}
+  56.9% {margin-left: -900%;}
+  58% {margin-left: -1000%;}
+  62.7% {margin-left: -1000%;}
+  63.8% {margin-left: -1100%;}
+  64.9% {margin-left: -1100%;}
+  69.6% {margin-left: -1200%;}
+  70.7% {margin-left: -1200%;}
+  75.4% {margin-left: -1300%;}
+  76.5% {margin-left: -1300%;}
+  81.2% {margin-left: -1400%;}
+  82.3% {margin-left: -1400%;}
+  87% {margin-left: -1500%;}
+  88.1% {margin-left: -1500%;}
+  92.8% {margin-left: -1600%;}
+  93.9% {margin-left: -1600%;}
+  98.6% {margin-left: -1700%;}
+  99.7% {margin-left: -1700%;}
 }
 /*# sourceMappingURL=maps/style.css.map */
