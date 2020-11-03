@@ -47,6 +47,7 @@ urlpatterns = [
     path('galeria/',galeria_views.galeria,name="Galeria"),
     path('inscripcion/',registros_views.inscripcion,name="Inscripcion"),
     path('gracias/',core_views.gracias,name="Gracias"),
+    path('memorias/',core_views.memorias,name="Memorias"),
     path('admin/', admin.site.urls),
 ]
 

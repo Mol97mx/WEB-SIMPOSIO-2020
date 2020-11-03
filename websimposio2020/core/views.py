@@ -73,3 +73,6 @@ def simposio(request):
 
 def gracias(request):
     return render (request,"core/gracias.html")
+
+def memorias(request):
+    return render (request,"core/memorias.html")
