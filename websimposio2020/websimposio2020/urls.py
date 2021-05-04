@@ -41,6 +41,7 @@ urlpatterns = [
     path('contacto/',core_views.contacto,name="Contacto"),
     path('acerca/',core_views.acerca,name="Acerca"),
     path('quienes/',core_views.quienes,name="Quienes"),
+    path('directorio/',core_views.directorio,name="Directorio"),
     path('precios/',core_views.precios,name="Precios"),
     path('simposio/',core_views.simposio,name="Simposio"),
     path('calendario/',core_views.calendario,name="Calendario"),

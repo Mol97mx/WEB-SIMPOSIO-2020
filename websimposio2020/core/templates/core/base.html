@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>XVI Simposio Nacional y VIII Internacional de Valuación Rural</title>
+    <title>Instituto Nacional de Valuación Agropecuaria y Forestal de Michoacán A. C.</title>
     
     <!-- PLUGINS CSS STYLE -->
     <!-- Bootstrap -->
@@ -36,7 +36,7 @@
   <nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
     <div class="container-fluid p-0">
         <!-- logo -->
-        <a class="navbar-brand" href="{%url 'Home'%}">
+        <a class="navbar-brand" href="{%url 'Quienes'%}">
           <img src="{% static 'core/images/logo_invaf.png'%}" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,61 +44,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item dropdown active dropdown-slide">
-            <a class="nav-link" href="{%url 'Home'%}"  data-toggle="dropdown">Home
-              <span>/</span>
-            </a>
-            <!-- Dropdown list -->
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{%url 'Home'%}">Portada</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown dropdown-slide">
-            <a class="nav-link" href="#">Cursos Talleres<span>/</span></a>
-            <!-- Dropdown list -->
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{%url 'Talleres'%}">Cursos Talleres</a>
-                <a class="dropdown-item" href="{%url 'Instructores'%}">Instructores</a>
-              </div>
-          </li>
-          <li class="nav-item dropdown dropdown-slide">
-            <a class="nav-link" href="{%url 'Simposio'%}">Simposio<span>/</span></a>
-            <!-- Dropdown list -->
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{%url 'Patrocinadores'%}">Instituciones participantes</a>
-                <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
-                <a class="dropdown-item" href="{%url 'Precios'%}">Costos</a>
-              </div>
-          </li>
           <li class="nav-item dropdown dropdown-slide">
             <a class="nav-link" href="#" data-toggle="dropdown">INVAF<span>/</span></a>
-              <!-- Dropdown list -->
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="{%url 'Quienes'%}">Quienes somos</a>
+                <a class="dropdown-item" href="{%url 'Directorio'%}">Directorio</a>
+                <a class="dropdown-item" href="{%url 'Galeria'%}">Galeria</a>
               </div>
-          </li>
-          <li class="nav-item dropdown dropdown-slide">
-            <a class="nav-link" href="{%url 'Calendario'%}">Programa<span>/</span></a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="{%url 'Calendario'%}">Panel de expertos</a> 
-                <a class="dropdown-item" href="{%url 'Calendario'%}">Panelistas</a>
-                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencias magistrales</a>
-                <a class="dropdown-item" href="{%url 'Conferencistas'%}">Conferencistas</a>
-                <a class="dropdown-item" href="{%url 'Ponencias'%}">Ponencias</a>
-                <a class="dropdown-item" href="#">Ponentes</a>
-            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{%url 'Contacto'%}">Contacto<span>/</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{%url 'Memorias'%}">Memorias</a>
+          <li class="nav-item dropdown dropdown-slide">
+            <a class="nav-link" href="#" data-toggle="dropdown">Memorias</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{%url 'Memorias'%}">Memorias Simposio 2020</a>
+              </div>
           </li>
         </ul>
-        <a href="{%url 'Inscripcion'%}" class="ticket">
-          <img src="{% static 'core/images/icon/ticket.png'%}" alt="ticket">
-          <span><b>Inscripción</b></span>
-        </a>
         </div>
     </div>
   </nav>
@@ -141,7 +104,7 @@
       <div class="row">
         <div class="col-md-6 align-self-center">
           <div class="copyright-text">
-            <p><a href="#">XVI Simposio Nacional y VIII Internacional de Valuación Rural</a> &#169; 2020 Todos los derechos reservados</p>
+            <p><a href="#">Instituto Nacional de Valuación Agropecuaria y Forestal de Michoacán A. C.</a> &#169; 2020 Todos los derechos reservados</p>
           </div>
         </div>
         <div class="col-md-6">

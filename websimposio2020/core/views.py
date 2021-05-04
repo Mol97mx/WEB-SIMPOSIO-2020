@@ -1,12 +1,10 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse
-from django.http import JsonResponse
-import stripe
-stripe.api_key = "sk_test_vkm9UX8dSGs3JNkDWf0OiBf700Hqs16iz4"
+#from django.http import JsonResponses
 # Create your views here.
 
 def home(request):
-    return render (request,"core/home.html")
+    return render (request,"core/quienes.html")
 
 def informacion(request):
     return render (request,"core/informacion.html")
@@ -76,3 +74,6 @@ def gracias(request):
 
 def memorias(request):
     return render (request,"core/memorias.html")
+
+def directorio(request):
+    return render (request,"core/directorio.html")
